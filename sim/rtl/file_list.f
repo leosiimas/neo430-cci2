@@ -1,4 +1,4 @@
--smartorder -work work -V93 -top user_logic_tb -notimingchecks -gui -access +rw
+-makelib neo430 ../../rtl/core/*.vhd -endlib -smartorder -work work -V93 -top neo430_tb -notimingchecks -gui -access +rw
 ../../rtl/core/neo430_top.vhd
-../tb/tb_padrao.vhd
+../neo430_tb.vhd
 
