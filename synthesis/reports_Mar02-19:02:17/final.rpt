@@ -1,0 +1,46 @@
+
+
+Working Directory = /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis
+QoS Summary for neo430_top
+========================================================================================
+Metric                  generic    map        syn_opt    syn_opt_low_incr final     
+========================================================================================
+Slack (ps):               1578.8        0.0        0.0        0.0        0.0
+  R2R (ps):               1578.8        0.0        0.0        0.0        0.0
+  I2R (ps):               4633.0     4432.5     4424.1     4424.1     4424.1
+  R2O (ps):             no_value   no_value   no_value   no_value   no_value
+  I2O (ps):             no_value   no_value   no_value   no_value   no_value
+  CG  (ps):               4721.0     2735.7     2853.9     2853.9     2853.9
+TNS (ps):                      0          0          0          0          0
+  R2R (ps):                  0.0        0.0        0.0        0.0        0.0
+  I2R (ps):                  0.0        0.0        0.0        0.0        0.0
+  R2O (ps):             no_value   no_value   no_value   no_value   no_value
+  I2O (ps):             no_value   no_value   no_value   no_value   no_value
+  CG  (ps):                  0.0        0.0        0.0        0.0        0.0
+Failing Paths:                 0          0          0          0          0
+Area:                    4447246    3807423    3797803    3797803    3797803
+Instances:                101508     114209     113455     113455     113455
+Utilization (%):            0.00       0.00       0.00       0.00       0.00
+Tot. Net Length (um):   no_value   no_value   no_value   no_value   no_value
+Avg. Net Length (um):   no_value   no_value   no_value   no_value   no_value
+Total Overflow H:              0          0          0          0          0
+Total Overflow V:              0          0          0          0          0
+Route Overflow H (%):   no_value   no_value   no_value   no_value   no_value
+Route Overflow V (%):   no_value   no_value   no_value   no_value   no_value
+========================================================================================
+CPU  Runtime (m:s):        05:08      27:37      03:37      01:05      08:16
+Real Runtime (m:s):        06:23      47:34      04:05      01:26      08:44
+CPU  Elapsed (m:s):        05:16      32:53      36:30      37:35      45:51
+Real Elapsed (m:s):        06:25      53:59      58:04      59:31      68:14
+Memory (MB):             1621.46    1702.84    1702.84    1696.25    1702.84
+========================================================================================
+
+========================================================================================
+Flow Settings:
+========================================================================================
+Total Runtime (m:s): 68:32
+Total Memory (MB):   1696.25
+Executable Version:  15.22
+========================================================================================
+
+

@@ -2,7 +2,7 @@
 set sdc_version 1.5
 set_load_unit -picofarads 1
 
-create_clock -name {clk_i} -period 5.0 [get_ports {clk_i}]
+create_clock -name {clk_i} -period 10.0 [get_ports {clk_i}]
 
 set_false_path -from [get_ports {rst_i}]
 
