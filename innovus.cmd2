@@ -1,0 +1,127 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue Mar  7 10:24:38 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v16.17-s018_1 (64bit) 08/31/2017 09:57 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 16.17-s018_1 NR170729-1044/16_17-UB (database version 2.30, 373.6.1) {superthreading v1.33}
+#@(#)CDS: AAE 16.17-s002 (64bit) 08/31/2017 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 16.17-s002_1 () May 30 2017 04:32:42 ( )
+#@(#)CDS: SYNTECH 16.15-s004_1 () Jan 10 2017 07:20:10 ( )
+#@(#)CDS: CPE v16.17-s005
+#@(#)CDS: IQRC/TQRC 15.2.6-s621 (64bit) Thu Oct 27 23:06:47 PDT 2016 (Linux 2.6.18-194.el5)
+
+eval_legacy {source powerplanning_01.inn}
+place_design
+set_layer_preference routeGuide -is_visible 0
+set_layer_preference ptnPinBlk -is_visible 0
+set_layer_preference ptnFeed -is_visible 0
+set_layer_preference pwrdm -is_visible 0
+set_layer_preference netRect -is_visible 0
+set_layer_preference substrateNoise -is_visible 0
+set_layer_preference powerNet -is_visible 0
+set_layer_preference stdRow -is_visible 0
+set_layer_preference ioRow -is_visible 0
+set_layer_preference sitePattern -is_visible 0
+set_layer_preference macroSitePattern -is_visible 0
+set_layer_preference bump -is_visible 0
+set_layer_preference bumpBack -is_visible 0
+set_layer_preference bumpConnect -is_visible 0
+set_layer_preference relFPlan -is_visible 0
+set_layer_preference sdpGroup -is_visible 0
+set_layer_preference sdpConnect -is_visible 0
+set_layer_preference sizeBlkg -is_visible 0
+set_layer_preference resizeFPLine1 -is_visible 0
+set_layer_preference resizeFPLine2 -is_visible 0
+set_layer_preference congTag -is_visible 0
+set_layer_preference ioSlot -is_visible 0
+set_layer_preference overlapMacro -is_visible 0
+set_layer_preference overlapGuide -is_visible 0
+set_layer_preference overlapBlk -is_visible 0
+set_layer_preference datapath -is_visible 0
+set_layer_preference term -is_visible 0
+set_layer_preference violation -is_visible 0
+set_layer_preference busguide -is_visible 0
+set_layer_preference aggress -is_visible 0
+set_layer_preference text -is_visible 0
+set_layer_preference pinText -is_visible 0
+set_layer_preference flightLine -is_visible 0
+set_layer_preference portNum -is_visible 0
+set_layer_preference dpt -is_visible 0
+set_layer_preference pinblock -is_visible 1
+set_layer_preference pinstdCell -is_visible 1
+set_layer_preference pinio -is_visible 1
+set_layer_preference piniopin -is_visible 1
+set_layer_preference pinother -is_visible 1
+set_layer_preference obsblock -is_visible 1
+set_layer_preference obsstdCell -is_visible 1
+set_layer_preference obsio -is_visible 1
+set_layer_preference obsother -is_visible 1
+set_layer_preference layoutObj -is_visible 1
+set_layer_preference pwrdm -is_visible 1
+set_layer_preference netRect -is_visible 1
+set_layer_preference substrateNoise -is_visible 1
+set_layer_preference powerNet -is_visible 1
+set_layer_preference routeGuide -is_visible 1
+set_layer_preference ptnPinBlk -is_visible 1
+set_layer_preference ptnFeed -is_visible 1
+set_layer_preference relFPlan -is_visible 1
+set_layer_preference sdpGroup -is_visible 1
+set_layer_preference sdpConnect -is_visible 1
+set_layer_preference sizeBlkg -is_visible 1
+set_layer_preference resizeFPLine1 -is_visible 1
+set_layer_preference resizeFPLine2 -is_visible 1
+set_layer_preference congTag -is_visible 1
+set_layer_preference ioSlot -is_visible 1
+set_layer_preference overlapMacro -is_visible 1
+set_layer_preference overlapGuide -is_visible 1
+set_layer_preference overlapBlk -is_visible 1
+set_layer_preference datapath -is_visible 1
+set_layer_preference stdRow -is_visible 1
+set_layer_preference ioRow -is_visible 1
+set_layer_preference sitePattern -is_visible 1
+set_layer_preference macroSitePattern -is_visible 1
+set_layer_preference bump -is_visible 1
+set_layer_preference bumpBack -is_visible 1
+set_layer_preference bumpConnect -is_visible 1
+set_layer_preference inst -is_visible 1
+set_layer_preference stdCell -is_visible 1
+set_layer_preference coverCell -is_visible 1
+set_layer_preference phyCell -is_visible 1
+set_layer_preference areaIo -is_visible 1
+set_layer_preference io -is_visible 1
+set_layer_preference term -is_visible 1
+set_layer_preference violation -is_visible 1
+set_layer_preference busguide -is_visible 1
+set_layer_preference aggress -is_visible 1
+set_layer_preference text -is_visible 1
+set_layer_preference pinText -is_visible 1
+set_layer_preference flightLine -is_visible 1
+set_layer_preference portNum -is_visible 1
+set_layer_preference dpt -is_visible 1
+set_layer_preference mGrid -is_visible 1
+set_layer_preference pGrid -is_visible 1
+set_layer_preference userGrid -is_visible 1
+set_layer_preference fGrid -is_visible 1
+set_layer_preference gcell -is_visible 1
+set_layer_preference trimGridObj -is_visible 1
+set_layer_preference trackObj -is_visible 1
+set_layer_preference nonPrefTrackObj -is_visible 1
+set_layer_preference densityMap -is_visible 1
+set_layer_preference pinDensityMap -is_visible 1
+set_layer_preference timingMap -is_visible 1
+set_layer_preference powerDensity -is_visible 1
+set_layer_preference routeCongest -is_visible 1
+set_layer_preference congChan -is_visible 1
+set_layer_preference densityMap -is_visible 0
+set_layer_preference pinDensityMap -is_visible 0
+set_layer_preference timingMap -is_visible 0
+set_layer_preference powerDensity -is_visible 0
+set_layer_preference routeCongest -is_visible 0
+set_layer_preference congChan -is_visible 0
+eval_legacy place_design
+set_layer_preference block -is_visible 0
+set_layer_preference block -is_visible 1
+set_layer_preference inst -is_visible 0

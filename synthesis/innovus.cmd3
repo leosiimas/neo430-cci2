@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Feb 23 04:49:05 2023                
+#  Created on Tue Mar  7 14:57:54 2023                
 #                                                     
 #######################################################
 
@@ -13,4 +13,21 @@
 #@(#)CDS: CPE v16.17-s005
 #@(#)CDS: IQRC/TQRC 15.2.6-s621 (64bit) Thu Oct 27 23:06:47 PDT 2016 (Linux 2.6.18-194.el5)
 
-eval_legacy {source powerplann_1.inn}
+eval_legacy {source poscts_01.inn
+}
+route_design -global
+route_detail
+route_global_detail
+check_design -all
+report_timing
+check_drc
+eval_legacy {saveDesign routing_01.inn}
+add_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLERadd_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLERadd_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLERadd_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLER
+add_fillers -base_cells FEED1 FEED2 FEED3 FEED5 FEED7 FEED10 FEED15 FEED25 -prefix FILLER
+eval_legacy {saveDesign add_filler.inn}
+report_summary -out_dir summaryReport
+eval_legacy {source physical/6_netlist_sdf.tcl }
+write_netlist busca_padrao.v
+extract_rc
+write_parasitics -set_load_file busca_padrao.cap
+write_sdf busca_padrao.sdf

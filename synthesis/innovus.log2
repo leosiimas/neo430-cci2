@@ -4,7 +4,7 @@ Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v16.17-s018_1, built Thu Aug 31 09:57:10 PDT 2017
 Options:	-common_ui 
-Date:		Wed Feb 22 17:59:53 2023
+Date:		Tue Mar  7 13:28:21 2023
 Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
 OS:		CentOS Linux release 7.9.2009 (Core)
 
@@ -18,29 +18,32 @@ INFO:    You have enabled the Common UI that has been internally qualified at Ca
          to qualify your usage and make sure it meets your needs before deploying it widely.
 ***************************************************************************************
 
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_46557_pgmicro04_leonardo.abreu_LCKTI6.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_45450_pgmicro04_leonardo.abreu_TIJLNf.
 
 
 **INFO:  MMMC transition support version v31-84 
 
 Loading fill procedures ...
-[DEV]innovus 1> source physical/1_init.tcl 
-Starting library reading in 'Multi-threaded flow' (with '8' threads)
-
-Threads Configured:8
-Reading default_emulate_libset_max timing library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib.
+[DEV]innovus 1> eval_legacy {source poscts_01.inn}
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Set Using Default Delay Limit as 1000.
+Set Default Input Pin Transition as 0.1 ps.
+**WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
+Reading default_emulate_libset_max timing library '/pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib' ...
 **WARN: (TECHLIB-436):	Attribute 'max_capacitance' on 'output/inout' pin 'SIG' of cell 'SIGNALHOLD' is not defined in the library. (File /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib)
-Read 811 cells in D_CELLS_MOSST_typ_1_80V_25C.
-Reading default_emulate_libset_max timing library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOS5ST/IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.lib.
-Read 414 cells in IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.
-Library reading multithread flow ended. (File /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib)
+Read 811 cells in library 'D_CELLS_MOSST_typ_1_80V_25C' 
+Reading default_emulate_libset_max timing library '/pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOS5ST/IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C.lib' ...
+Read 414 cells in library 'IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C' 
+default_emulate_rc_corner
 
-Loading LEF file /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_FE.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/lef/xc018m6_FE.lef ...
 
-Loading LEF file /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/D_CELLS.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/lef/D_CELLS.lef ...
 Set DBUPerIGU to M2 pitch 630.
 
-Loading LEF file /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/IO_CELLS_5V.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/lef/IO_CELLS_5V.lef ...
 **WARN: (IMPLF-200):	Pin 'PAD' in macro 'JTP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
 **WARN: (IMPLF-200):	Pin 'PAD' in macro 'JTGDP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
@@ -126,10 +129,12 @@ Type 'man IMPLF-201' for more detail.
 **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 
-viaInitial starts at Wed Feb 22 18:29:11 2023
-viaInitial ends at Wed Feb 22 18:29:11 2023
-#- Begin Load netlist data ... (date=02/22 18:29:11, mem=601.5M)
-*** Begin netlist parsing (mem=601.5M) ***
+viaInitial starts at Tue Mar  7 13:29:48 2023
+viaInitial ends at Tue Mar  7 13:29:48 2023
+Loading view definition file from /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.42min, fe_real=1.45min, fe_mem=558.5M) ***
+#- Begin Load netlist data ... (date=03/07 13:29:48, mem=558.5M)
+*** Begin netlist parsing (mem=558.5M) ***
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\vdd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25' is defined in LEF but not in the timing library.
@@ -2222,11 +2227,12 @@ Pin 'VDDR' of cell 'APR00DP' is declared as power/ground in LEF but as signal in
 Created 1225 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
-Reading verilog netlist 'innovus/neo430.v'
-/-
-*** Memory Usage v#1 (Current mem = 685.938M, initial mem = 181.020M) ***
-*** End netlist parsing (cpu=0:00:02.3, real=0:00:02.0, mem=685.9M) ***
-#- End Load netlist data ... (date=02/22 18:29:13, total cpu=0:00:02.3, real=0:00:02.0, peak res=685.9M, current mem=685.9M)
+Reading verilogBinary netlist '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.v.bin'
+Reading binary database version 1
+
+*** Memory Usage v#1 (Current mem = 1154.941M, initial mem = 173.020M) ***
+*** End netlist parsing (cpu=0:00:00.7, real=0:00:01.0, mem=1154.9M) ***
+#- End Load netlist data ... (date=03/07 13:29:49, total cpu=0:00:00.7, real=0:00:01.0, peak res=1154.9M, current mem=1154.9M)
 Top level cell is neo430_top.
 **WARN: (IMPTS-282):	Cell 'BT8SP' is not a level shifter cell but has 'input_signal_level' and 'output_signal_level' specified on pins, or it has different related_power_pin specified on input and output pins. To mark this cell as level shifter, use 'is_level_shifter' attribute.
 Type 'man IMPTS-282' for more detail.
@@ -2277,18 +2283,20 @@ No recursion found.
 Building hierarchical netlist for Cell neo430_top ...
 *** Netlist is unique.
 ** info: there are 7465 modules.
-** info: there are 112933 stdCell insts.
+** info: there are 115431 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 773.688M, initial mem = 181.020M) ***
+*** Memory Usage v#1 (Current mem = 1180.953M, initial mem = 173.020M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 Set Default Input Pin Transition as 0.1 ps.
-**WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
-Type 'man IMPFP-3961' for more detail.
+Loading preference file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/gui.pref.tcl ...
 default_emulate_view
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
-Reading Capacitance Table File /pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_typ.capTbl ...
+Reading Capacitance Table File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/xc018m6_typ.capTbl ...
 Cap table was created using Encounter 07.10-s219_1.
 Process name: xc018m6_typ.
 **WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
@@ -2300,7 +2308,7 @@ Summary of Active RC-Corners :
     RC-Corner Name        : default_emulate_rc_corner
     RC-Corner Index       : 0
     RC-Corner Temperature : 25 Celsius
-    RC-Corner Cap Table   : '/pdk/xfab/XC018_61_3.1.3/cadence/xc018/LEF/xc018_m6_FE/xc018m6_typ.capTbl'
+    RC-Corner Cap Table   : '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/xc018m6_typ.capTbl'
     RC-Corner PreRoute Res Factor         : 1
     RC-Corner PreRoute Cap Factor         : 1
     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
@@ -2311,21 +2319,21 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
 *Info: initialize multi-corner CTS.
-Reading timing constraints file 'innovus//neo430.default_emulate_constraint_mode.sdc' ...
-Current (total cpu=0:04:20, real=0:29:22, peak res=518.3M, current mem=895.8M)
+Reading timing constraints file '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:28.4, real=0:01:29, peak res=525.2M, current mem=905.3M)
 neo430_top
 neo430_top
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//neo430.default_emulate_constraint_mode.sdc, Line 221586).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221586).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//neo430.default_emulate_constraint_mode.sdc, Line 221587).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221587).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File innovus//neo430.default_emulate_constraint_mode.sdc, Line 221588).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221588).
 
 Number of path exceptions in the constraint file = 1
 Number of paths exceptions after getting compressed = 1
-INFO (CTE): Reading of timing constraints file innovus//neo430.default_emulate_constraint_mode.sdc completed, with 3 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:01.0, peak res=537.9M, current mem=913.5M)
-Current (total cpu=0:04:20, real=0:29:23, peak res=537.9M, current mem=914.5M)
+INFO (CTE): Reading of timing constraints file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc completed, with 3 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:01.0, peak res=544.9M, current mem=924.2M)
+Current (total cpu=0:00:29.1, real=0:01:30, peak res=544.9M, current mem=924.2M)
 **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
 Total number of combinational cells: 512
 Total number of sequential cells: 234
@@ -2352,929 +2360,769 @@ Total number of identified unusable delay cells: 0
 default_emulate_view
 default_emulate_view
 default_emulate_view
-Adjusting coreMargin left    to finFet grid (PlacementGrid) : after adjusting :3.15
-Adjusting coreMargin bottom  to finFet grid (PlacementGrid) : after adjusting :3.05
-Adjusting coreMargin right   to finFet grid (PlacementGrid) : after adjusting :3.15
-Adjusting coreMargin top     to finFet grid (PlacementGrid) : after adjusting :3.05
-Adjusting core size to PlacementGrid : width :2330.37 height : 2322.88
-[DEV]innovus 2> evel_legacy {saveDesign floorplanning_1.inn}
-invalid command name "evel_legacy"
-[DEV]innovus 3> eval_legacy {saveDesign floorplanning_1.inn}
-#- Begin Save netlist data ... (date=02/22 18:39:57, mem=1106.5M)
-Writing Binary DB to floorplanning_1.inn.dat/neo430_top.v.bin ...
-#- End Save netlist data ... (date=02/22 18:39:58, total cpu=0:00:00.5, real=0:00:01.0, peak res=1627.5M, current mem=1627.5M)
-#- Begin Save AAE data ... (date=02/22 18:39:58, mem=1627.5M)
-Saving AAE Data ...
-#- End Save AAE data ... (date=02/22 18:39:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=1627.5M, current mem=1627.5M)
-#- Begin Save clock tree data ... (date=02/22 18:39:58, mem=1627.5M)
-#- End Save clock tree data ... (date=02/22 18:39:58, total cpu=0:00:00.0, real=0:00:00.0, peak res=1627.5M, current mem=1627.5M)
-Saving preference file floorplanning_1.inn.dat/gui.pref.tcl ...
-Saving mode setting ...
-Saving root attributes to be loaded post write_db ...
-Saving global file ...
-Saving root attributes to be loaded previous write_db ...
-#- Begin Save floorplan data ... (date=02/22 18:39:59, mem=1627.5M)
-Saving floorplan file ...
-#- End Save floorplan data ... (date=02/22 18:39:59, total cpu=0:00:00.1, real=0:00:00.0, peak res=1627.5M, current mem=1627.5M)
-Saving Drc markers ...
-... No Drc file written since there is no markers found.
-#- Begin Save placement data ... (date=02/22 18:39:59, mem=1627.5M)
-Saving placement file ...
-#- End Save placement data ... (date=02/22 18:39:59, total cpu=0:00:00.2, real=0:00:00.0, peak res=1627.5M, current mem=1627.5M)
-#- Begin Save routing data ... (date=02/22 18:39:59, mem=1627.5M)
-Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.3 real=0:00:00.0 mem=1627.5M) ***
-#- End Save routing data ... (date=02/22 18:39:59, total cpu=0:00:00.3, real=0:00:01.0, peak res=1627.5M, current mem=1627.5M)
-Saving property file floorplanning_1.inn.dat/neo430_top.prop
-*** Completed saveProperty (cpu=0:00:00.2 real=0:00:00.0 mem=1627.5M) ***
-#- Begin Save power constraints data ... (date=02/22 18:40:00, mem=1627.5M)
-#- End Save power constraints data ... (date=02/22 18:40:00, total cpu=0:00:00.0, real=0:00:00.0, peak res=1627.5M, current mem=1627.5M)
-No integration constraint in the design.
-
-
-default_emulate_rc_corner
-
-
-Generated self-contained design floorplanning_1.inn.dat
-*** Message Summary: 0 warning(s), 0 error(s)
-
-0
-[DEV]innovus 4> gui_set_tool flightline
-gui_set_draw_view ameba
-gui_set_draw_view ameba
-gui_set_draw_view fplan
-a
-ambiguous command name "a": add_area_io_fillers add_area_io_rows add_buffer_for_feedthrough add_clock_tree_exclusion_drivers add_decap_cell_candidates add_decaps add_decomp_filler add_endcaps add_fences add_filler_gaps add_fillers add_gate_array_filler add_io_buffers add_io_fillers add_io_insts add_io_row_fillers add_mask_colors add_metal_fill add_mim_cap add_notch_fill add_partition_feedthrus add_power_mesh_colors add_power_switches add_repeaters add_rings add_route_via_defs add_sdp_objs add_spare_insts add_split_power_vias add_stripes add_tap_walls add_tieoffs add_to_collection add_tracks add_tsv add_via_fill add_well_taps after align_partition_clones align_pins align_selected all_analysis_views all_clocks all_connected all_constraint_modes all_delay_corners all_fanin all_fanout all_inputs all_instances all_library_sets all_opconds all_outputs all_rc_corners all_registers all_timing_conditions analyze_paths_by_bottleneck analyze_paths_by_clock_domain analyze_paths_by_critical_false_path analyze_paths_by_default_path_group analyze_paths_by_drv analyze_paths_by_hier_port analyze_paths_by_hierarchy analyze_paths_by_view append append_to_collection apply array assemble_design assemble_proto_model assign_bumps assign_clock_tree_source_groups assign_io_pins assign_partition_pins assign_pg_bumps assign_signal_to_bump assign_tsv auto_execok auto_import auto_load auto_load_index auto_mkindex auto_mkindex_old auto_qualify auto_reset
-[DEV]innovus 5> gui_set_draw_view place
-f
-ambiguous command name "f": fblocked fconfigure fcopy file fileevent filter_collection finish_floorplan fix_ac_limit_violations fix_boundary_overlaps fix_multi_drivers fix_open_fill fix_via flatten_cover_cell flatten_ilm flip_or_rotate_obj flip_sdp_obj floorplan_get_snap_rule floorplan_set_snap_rule flush focus font for foreach foreach_in_collection fork format frame
-[DEV]innovus 6> add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5
-#- Begin addRing (date=02/22 19:46:28, mem=1137.8M)
-
-**WARN: (IMPPP-136):	The currently specified left spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-**WARN: (IMPPP-136):	The currently specified right spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-Ring generation is complete; vias are now being generated.
-addRing created 8 wires.
-ViaGen created 8 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  MET1  |        4       |       NA       |
-|  VIA1  |        8       |        0       |
-|  MET2  |        4       |       NA       |
-+--------+----------------+----------------+
-#- End addRing (date=02/22 19:46:29, total cpu=0:00:00.1, real=0:00:01.0, peak res=1138.8M, current mem=1138.8M)
-[DEV]innovus 7>  -width 0.44 -spacing 0.46 -offset 0.315 -width 0.44 -spacing 0.46 -offset 0.315aasd
-invalid command name "-width"
-[DEV]innovus 8> add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5 -width 0.44 -spacing 0.46 -offset 0.315
-#- Begin addRing (date=02/22 19:46:56, mem=1138.8M)
-
-Usage: add_rings [-help]
-                 [-around {each_block each_reef power_domain default_power_domain selected cluster shared_cluster user_defined}]
-                 [-center <0|1>] [-exclude_selected <0|1>]
-                 [-extend_corners {tl tr bl br lt lb rt rb}] [-follow {core io}]
-                 [-jog_distance <real_value>] -nets <name-or-value>
-                 [-offset_adjustment {automatic fixed}] [-rectangle <0|1>]
-                 [-skip_side {top bottom left right}]
-                 [-snap_wire_center_to_grid {none grid half_grid either}]
-                 [-threshold {value|auto}] [-type {core_rings block_rings}]
-                 [-use_interleaving_wire_group <0|1>] [-use_wire_group <0|1>]
-                 [-use_wire_group_bits <value>]
-                 [-use_wire_group_reinforcement <0|1>]
-                 [-use_wire_group_reinforcement_group_via <0|1>]
-                 [-use_wire_group_reinforcement_spacing_width {spacing width}]
-                 [-user_class <subclass_string>]
-                 [-user_defined_region <x1 y1 x2 y2 ...>] {-layer {layer | {top top_layer bottom bottom_layer left left_layer right right_layer}} } {-width {value | {top top_width bottom bottom_width left left_width right right_width}} } {-spacing {value | {top top_spacing bottom bottom_spacing left left_spacing right right_spacing}} } [-offset {value | {top top_offset bottom bottom_offset left left_offset right right_offset}} ]
-
-**ERROR: (IMPTCM-44):	Argument "-width" is already specified.
-#- End addRing (date=02/22 19:46:56, total cpu=0:00:00.0, real=0:00:00.0, peak res=1138.8M, current mem=1138.8M)
-  
-[DEV]innovus 9> delete_global_net_connections
-
-[DEV]innovus 10> connect_global_net vdd -type pg_pin -pin_base_name vconnect_global_net vdd -type pg_pin -pin_base_name vdd! -inst_base_name *
-dd! -inst_b [1Dase_name *
-[DEV]innovus 11> connect_global_net gnd -type pg_pin -pin_base_name gnd! -inst_b [1Dase_name *
-connect_global_net gnd -type pg_pin -pin_base_name gnd! -inst_base_name *
-[DEV]innovus 12> connect_global_net vdd -type tie_hi -inst_base_name connect_global_net vdd -type tie_hi -inst_base_name *
-*
-[DEV]innovus 13> connect_global_net gnd -type tie_lo -inst_base_name *connect_global_net gnd -type tie_lo -inst_base_name *
-
-[DEV]innovus 14> add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5 -width 0.44 -spacing 0.46 -offset 0.315
-#- Begin addRing (date=02/22 19:47:39, mem=1143.8M)
-
-Usage: add_rings [-help]
-                 [-around {each_block each_reef power_domain default_power_domain selected cluster shared_cluster user_defined}]
-                 [-center <0|1>] [-exclude_selected <0|1>]
-                 [-extend_corners {tl tr bl br lt lb rt rb}] [-follow {core io}]
-                 [-jog_distance <real_value>] -nets <name-or-value>
-                 [-offset_adjustment {automatic fixed}] [-rectangle <0|1>]
-                 [-skip_side {top bottom left right}]
-                 [-snap_wire_center_to_grid {none grid half_grid either}]
-                 [-threshold {value|auto}] [-type {core_rings block_rings}]
-                 [-use_interleaving_wire_group <0|1>] [-use_wire_group <0|1>]
-                 [-use_wire_group_bits <value>]
-                 [-use_wire_group_reinforcement <0|1>]
-                 [-use_wire_group_reinforcement_group_via <0|1>]
-                 [-use_wire_group_reinforcement_spacing_width {spacing width}]
-                 [-user_class <subclass_string>]
-                 [-user_defined_region <x1 y1 x2 y2 ...>] {-layer {layer | {top top_layer bottom bottom_layer left left_layer right right_layer}} } {-width {value | {top top_width bottom bottom_width left left_width right right_width}} } {-spacing {value | {top top_spacing bottom bottom_spacing left left_spacing right right_spacing}} } [-offset {value | {top top_offset bottom bottom_offset left left_offset right right_offset}} ]
-
-**ERROR: (IMPTCM-44):	Argument "-width" is already specified.
-#- End addRing (date=02/22 19:47:39, total cpu=0:00:00.0, real=0:00:00.0, peak res=1143.8M, current mem=1143.8M)
-  
-[DEV]innovus 15> add_rings -spacing 0.25 -width 0.5 -layer {top M1 bottom M1 left M2 right M2} -jog_distance 2.5 -offset 1.5 -nets {gnd vdd} -threshold 2.5
-
-#- Begin addRing (date=02/22 19:48:42, mem=1143.8M)
-
-**WARN: (IMPPP-136):	The currently specified left spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-**WARN: (IMPPP-136):	The currently specified right spacing 0.2500  is less than the required spacing 0.2800 for widths specified as 0.5000 and 0.5000.
-Ring generation is complete; vias are now being generated.
-#- End addRing (date=02/22 19:48:42, total cpu=0:00:00.0, real=0:00:01.0, peak res=1144.8M, current mem=1144.8M)
-[DEV]innovus 16> zoom_box 2332.488 1420.458 2330.369 1420.307
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-sroute_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {M1 METTP} -block_pin_target {nearest_target} -pad_pin_port_connect {all_port one_geom} -block_pin {use_lef} -allow_jogging 1 -crossover_via_layer_range {M1 METTP} -allow_layer_change 1 -target_via_layer_range {M1 METTP} -nets {gnd vdd}sss
-extra characters after close-brace
-[DEV]innovus 17> route_special -connect {block_pin core_pin pad_pin pad_ring floating_stripe} -layer_change_range {M1 METTP} -block_pin_target {nearest_target} -pad_pin_port_connect {all_port one_geom} -block_pin {use_lef} -allow_jogging 1 -crossover_via_layer_range {M1 METTP} -allow_layer_change 1 -target_via_layer_range {M1 METTP} -nets {gnd vdd}
-#- Begin sroute (date=02/22 19:57:43, mem=1144.8M)
-*** Begin SPECIAL ROUTE on Wed Feb 22 19:57:44 2023 ***
-SPECIAL ROUTE ran on directory: /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis
-SPECIAL ROUTE ran on machine: pgmicro04 (Linux 3.10.0-1160.81.1.el7.x86_64 Xeon 1.20Ghz)
-
-Begin option processing ...
-srouteConnectPowerBump set to false
-routeSelectNet set to "gnd vdd"
-routeSpecial set to true
-srouteBlockPin set to "useLef"
-srouteBottomLayerLimit set to 1
-srouteBottomTargetLayerLimit set to 1
-srouteConnectConverterPin set to false
-srouteCrossoverViaBottomLayer set to 1
-srouteCrossoverViaTopLayer set to 6
-srouteFollowCorePinEnd set to 3
-srouteJogControl set to "preferWithChanges differentLayer"
-sroutePadPinAllPorts set to true
-sroutePreserveExistingRoutes set to true
-srouteRoutePowerBarPortOnBothDir set to true
-srouteStopBlockPin set to "nearestTarget"
-srouteTopLayerLimit set to 6
-srouteTopTargetLayerLimit set to 6
-End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1941.00 megs.
-
-Reading DB technology information...
-Finished reading DB technology information.
-Reading floorplan and netlist information...
-Finished reading floorplan and netlist information.
-Read in 12 layers, 6 routing layers, 1 overlap layer
-Read in 825 macros, 203 used
-Read in 195 components
-  195 core components: 195 unplaced, 0 placed, 0 fixed
-Read in 174 logical pins
-Read in 174 nets
-Read in 6 special nets, 2 routed
-Read in 390 terminals
-2 nets selected.
-
-Begin power routing ...
-**WARN: (IMPSR-1254):	Cannot find any block pin of net vdd. Check netlist, or change option to include the pin.
-**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net vdd. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net vdd. Check net list, or change port class in the technology file, or change option to include pin in given range.
-**WARN: (IMPSR-1254):	Cannot find any block pin of net gnd. Check netlist, or change option to include the pin.
-**WARN: (IMPSR-1256):	Cannot find any CORE class pad pin of net gnd. Change routing area or layer to include the expected pin, or check netlist, or change port class in the technology file.
-Type 'man IMPSR-1256' for more detail.
-Cannot find any AREAIO class pad pin of net gnd. Check net list, or change port class in the technology file, or change option to include pin in given range.
-CPU time for FollowPin 0 seconds
-CPU time for FollowPin 0 seconds
-  Number of IO ports routed: 0
-  Number of Block ports routed: 0
-  Number of Stripe ports routed: 0
-  Number of Core ports routed: 954
-  Number of Pad ports routed: 0
-  Number of Power Bump ports routed: 0
-  Number of Followpin connections: 477
-End power routing: cpu: 0:00:00, real: 0:00:00, peak: 1960.00 megs.
-
-
-
- Begin updating DB with routing results ...
- Updating DB with 1 via definition ...Extracting standard cell pins and blockage ...... 
+#- Begin Load SymbolTable ... (date=03/07 13:29:51, mem=929.7M)
+#- End Load SymbolTable ... (date=03/07 13:29:52, total cpu=0:00:00.6, real=0:00:01.0, peak res=943.7M, current mem=943.7M)
+#- Begin Load floorplan data ... (date=03/07 13:29:52, mem=943.7M)
+Reading floorplan file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.fp.gz (mem = 943.7M).
+*info: reset 119772 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 2337300 2333860)
+ ... processed partition successfully.
+Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
+Delete all existing relative floorplan constraints.
+*** End loading floorplan (cpu = 0:00:00.8, mem = 967.7M) ***
+#- End Load floorplan data ... (date=03/07 13:29:53, total cpu=0:00:00.8, real=0:00:01.0, peak res=967.7M, current mem=967.7M)
+#- Begin Load placement data ... (date=03/07 13:29:53, mem=967.7M)
+*** Checked 4 GNC rules.
+*** applyConnectGlobalNets disabled.
+Reading placement file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.place.gz.
+** Reading stdCellPlacement "/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.place.gz" ...
+*** Completed restorePlace (cpu=0:00:00.9 real=0:00:01.0 mem=990.0M) ***
+Total net length = 8.734e+06 (5.025e+06 3.709e+06) (ext = 1.767e+05)
+#- End Load placement data ... (date=03/07 13:29:54, total cpu=0:00:00.9, real=0:00:01.0, peak res=990.0M, current mem=990.0M)
+*** Checked 4 GNC rules.
+*** Applying global-net connections...
+*** Applied 4 GNC rules (cpu = 0:00:00.1)
+#- Begin Load routing data ... (date=03/07 13:29:54, mem=990.0M)
+Reading routing file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.route.gz.
+Reading Innovus routing data (Created by Innovus v16.17-s018_1 on Tue Mar  7 12:39:55 2023 Format: 16.1) ...
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+*** Total 119657 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:02.0 real=0:00:02.0 mem=1117.2M) ***
+#- End Load routing data ... (date=03/07 13:29:56, total cpu=0:00:02.0, real=0:00:02.0, peak res=1117.2M, current mem=1117.2M)
+Reading property file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.prop
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Completed restoreProperty (cpu=0:00:00.5 real=0:00:00.0 mem=1118.2M) ***
+default_emulate_view
+**WARN: (IMPCK-8086):	The command specifyClockTree is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to a CCOpt-based flow.
+Checking spec file integrity...
+
+Reading clock tree spec file '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top.ctstch' ...
+
+RouteType               : FE_CTS_DEFAULT
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+RC Information for View default_emulate_view :
+Est. Cap                : 0.134357(V=0.13395 H=0.134764) (ff/um) [0.000134357]
+Est. Res                : 0.301629(V=0.301629 H=0.301629)(ohm/um) [0.000301629]
+Est. Via Res            : 4.25829(ohm) [8.23269]
+Est. Via Cap            : 0.183117(ff)
+M1(H) w=0.23(um) s=0.23(um) p=0.61(um) es=0.99(um) cap=0.128(ff/um) res=0.41(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=3.9744(ohm) viaCap=0.186661(ff)
+M3(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.135(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M4(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M5(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.132(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.181299(ff)
+M6(V) w=0.44(um) s=0.46(um) p=1.26(um) es=2.08(um) cap=0.11(ff/um) res=0.0836(ohm/um) viaRes=1.3248(ohm) viaCap=0.248205(ff)
+
+RouteType               : FE_CTS_DEFAULT_LEAF
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+RC Information for View default_emulate_view :
+Est. Cap                : 0.134357(V=0.13395 H=0.134764) (ff/um) [0.000134357]
+Est. Res                : 0.301629(V=0.301629 H=0.301629)(ohm/um) [0.000301629]
+Est. Via Res            : 4.25829(ohm) [8.23269]
+Est. Via Cap            : 0.183117(ff)
+M1(H) w=0.23(um) s=0.23(um) p=0.61(um) es=0.99(um) cap=0.128(ff/um) res=0.41(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=3.9744(ohm) viaCap=0.186661(ff)
+M3(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.135(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M4(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M5(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.132(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.181299(ff)
+M6(V) w=0.44(um) s=0.46(um) p=1.26(um) es=2.08(um) cap=0.11(ff/um) res=0.0836(ohm/um) viaRes=1.3248(ohm) viaCap=0.248205(ff)
+
+Switching off Advanced RC Correlation modes in AAE mode.
+Active Analysis Views for CTS are,
+#1 default_emulate_view
+Default Analysis Views is default_emulate_view
 
 
-sroute post-processing starts at Wed Feb 22 19:57:44 2023
-The viaGen is rebuilding shadow vias for net gnd.
-sroute post-processing ends at Wed Feb 22 19:57:44 2023
+****** AutoClockRootPin ******
+AutoClockRootPin 1: clk_i
+# NoGating         NO
+# SetDPinAsSync    NO
+# SetIoPinAsSync   NO
+# SetAsyncSRPinAsSync   NO
+# SetTriStEnPinAsSync   NO
+# SetBBoxPinAsSync   NO
+# RouteClkNet      YES
+# PostOpt          YES
+# RouteType        FE_CTS_DEFAULT
+# LeafRouteType    FE_CTS_DEFAULT_LEAF
 
-sroute post-processing starts at Wed Feb 22 19:57:44 2023
-The viaGen is rebuilding shadow vias for net vdd.
-sroute post-processing ends at Wed Feb 22 19:57:44 2023
-sroute created 1431 wires.
-ViaGen created 954 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  MET1  |      1431      |       NA       |
-|  VIA1  |       954      |        0       |
-+--------+----------------+----------------+
-#- End sroute (date=02/22 19:57:44, total cpu=0:00:01.8, real=0:00:01.0, peak res=1198.1M, current mem=1198.1M)
-[DEV]innovus 18> eval_legacy { panCenter 8.587 -238.155 }
-zoom_box 1199.981 1089.501 1206.647 1109.499
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-aadd_well_taps -cell FEED1 -cell_interval 20 -fixed_gap -prefix WELLTAP -in_row_offset 8.0
-invalid command name "aadd_well_taps"
-[DEV]innovus 19> add_well_taps -cell FEED1 -cell_interval 20 -fixed_gap -prefix WELLTAP -in_row_offset 8.0
+***** !! NOTE !! *****
+
+CTS treats D-pins and I/O pins as non-synchronous pins by default.
+If you want to change the behavior, you need to use the SetDPinAsSync
+or SetIoPinAsSync statement in the clock tree specification file,
+or use the setCTSMode -traceDPinAsLeaf {true|false} command,
+or use the setCTSMode -traceIoPinAsLeaf {true|false} command
+before specifyClockTree command.
+
+*** End specifyClockTree (cpu=0:00:00.0, real=0:00:01.0, mem=1128.2M) ***
+#- Begin Load power constraints ... (date=03/07 13:29:57, mem=1128.2M)
+source /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/poscts_01.inn.dat/neo430_top_power_constraints.tcl
+'set_default_switching_activity' finished successfully.
+#- End Load power constraints ... (date=03/07 13:29:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=1128.2M, current mem=1128.2M)
+#- Begin load AAE data ... (date=03/07 13:29:57, mem=1128.2M)
+#- End load AAE data ... (date=03/07 13:29:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=1128.2M, current mem=1128.2M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-200          434  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201          362  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPFP-3961           1  The techSite '%s' has no related standar...
+WARNING   IMPTS-282           30  Cell '%s' is not a level shifter cell bu...
+WARNING   IMPEXT-2773          1  The via resistance between layers %s and...
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+WARNING   IMPVL-159         1620  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   TA-976               1  Path groups asserted by the group_path c...
+WARNING   GLOBAL-100           1  Global '%s' has become obsolete. It will...
+WARNING   TCLNL-330            3  set_input_delay on clock root '%s' is no...
+WARNING   TECHLIB-436          1  Attribute '%s' on '%s' pin '%s' of cell ...
+*** Message Summary: 2455 warning(s), 0 error(s)
+
+3
+[DEV]innovus 2> route_design -global
+#route_design: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1176.26 (MB), peak = 1176.26 (MB)
+#default_emulate_rc_corner has no qx tech file defined
+#No active RC corner or QRC tech file is missing.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: mulit-cut via swapping is disabled by user.
+#**INFO: All auto set options tuned by route_design will be restored to their original settings on command completion.
+#**INFO: auto set of routeReserveSpaceForMultiCut to true
+#**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
 Estimated cell power/ground rail width = 0.915 um
-**WARN: (IMPSP-5134):	Setting cellInterval to 19.530 (microns) as a multiple of cell FEED1'sType 'man IMPSP-5134' for more detail.
-**WARN: (IMPSP-5134):	Setting inRowOffset to 7.560 (microns) as a multiple of cell FEED1'sType 'man IMPSP-5134' for more detail.
-For 56644 new insts, *** Applied 2 GNC rules (cpu = 0:00:00.0)
-Inserted 56644 well-taps <FEED1> cells (prefix WELLTAP).
-[DEV]innovus 20> **ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-add_stripes -block_ring_top_layer_limit M3 -max_same_layer_jog_length 6 -pad_core_ring_bottom_layer_limit M1 -set_to_set_distance 25 -pad_core_ring_top_layer_limit M3 -spacing 6 -merge_stripes_value 2.5 -layer M2 -block_ring_bottom_layer_limit M1 -width 0.5 -nets {gnd vdd}
+Begin checking placement ... (start mem=1318.0M, init mem=1362.0M)
+*info: Placed = 172194         (Fixed = 56763)
+*info: Unplaced = 0           
+Placement Density:72.85%(3825651/5251496)
+Placement Density (including fixed std cells):73.72%(4000163/5426009)
+Finished checkPlace (cpu: total=0:00:03.3, vio checks=0:00:00.6; mem=1391.0M)
+#**INFO: auto set of routeWithTimingDriven to true
+#**INFO: auto set of routeWithSiDriven to true
 
-#- Begin addStripe (date=02/22 20:12:35, mem=1415.7M)
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1391.0M) ***
 
-Starting stripe generation ...
-Non-Default setAddStripeOption Settings :
-  NONE
-**WARN: (IMPPP-4055):	The run time of add_stripes will degrade with multiple cpu setting according to the number of stripe sets, ingore the setting of set_multi_cpu_usage in add_stripes.
-**WARN: (IMPPP-354):	The power planner did not generate vertical stripe at 3.400 1.050 3.400 2327.430 with width 0.500 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
-Stripe generation is complete; vias are now being generated.
-addStripe created 186 wires.
-ViaGen created 44733 vias, deleted 0 via to avoid violation.
-+--------+----------------+----------------+
-|  Layer |     Created    |     Deleted    |
-+--------+----------------+----------------+
-|  VIA1  |      44733     |        0       |
-|  MET2  |       186      |       NA       |
-+--------+----------------+----------------+
-#- End addStripe (date=02/22 20:12:37, total cpu=0:00:02.4, real=0:00:02.0, peak res=1415.7M, current mem=1415.7M)
-[DEV]innovus 21> **ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-gui_pan_page 0 -1
-gui_pan_page 0 -1
-gui_pan_page 0 -1
-gui_pan_page 0 -1
-gui_pan_page 0 -1
-gui_pan_page 0 1
-gui_pan_page 0 1
-gui_pan_page 0 -1
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-**ERROR: (IMPQTF-4044):	Error happens when execute '¶õa' with error message: 'invalid command name "¶õa"'.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
-gui_pan_page 0 1
-gui_pan_page 0 -1
-gui_pan_page 1 0
-gui_pan_page 0 1
-gui_pan_page -1 0
-eval_legacy {saveDesign powerplann_1.inn}
-#- Begin Save netlist data ... (date=02/22 20:17:35, mem=1415.7M)
-Writing Binary DB to powerplann_1.inn.dat/neo430_top.v.bin ...
-#- End Save netlist data ... (date=02/22 20:17:35, total cpu=0:00:00.4, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-#- Begin Save AAE data ... (date=02/22 20:17:35, mem=1937.7M)
-Saving AAE Data ...
-#- End Save AAE data ... (date=02/22 20:17:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-#- Begin Save clock tree data ... (date=02/22 20:17:35, mem=1937.7M)
-#- End Save clock tree data ... (date=02/22 20:17:35, total cpu=0:00:00.0, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-Saving preference file powerplann_1.inn.dat/gui.pref.tcl ...
-Saving mode setting ...
-Saving root attributes to be loaded post write_db ...
-Saving global file ...
-Saving root attributes to be loaded previous write_db ...
-#- Begin Save floorplan data ... (date=02/22 20:17:36, mem=1937.7M)
-Saving floorplan file ...
-#- End Save floorplan data ... (date=02/22 20:17:36, total cpu=0:00:00.3, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-Saving Drc markers ...
-... No Drc file written since there is no markers found.
-#- Begin Save placement data ... (date=02/22 20:17:36, mem=1937.7M)
-Saving placement file ...
-#- End Save placement data ... (date=02/22 20:17:37, total cpu=0:00:00.3, real=0:00:01.0, peak res=1937.7M, current mem=1937.7M)
-#- Begin Save routing data ... (date=02/22 20:17:37, mem=1937.7M)
-Saving route file ...
-*** Completed saveRoute (cpu=0:00:00.2 real=0:00:00.0 mem=1937.7M) ***
-#- End Save routing data ... (date=02/22 20:17:37, total cpu=0:00:00.3, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-Saving property file powerplann_1.inn.dat/neo430_top.prop
-*** Completed saveProperty (cpu=0:00:00.2 real=0:00:01.0 mem=1937.7M) ***
-#- Begin Save power constraints data ... (date=02/22 20:17:38, mem=1937.7M)
-#- End Save power constraints data ... (date=02/22 20:17:38, total cpu=0:00:00.0, real=0:00:00.0, peak res=1937.7M, current mem=1937.7M)
-No integration constraint in the design.
+globalRoute
 
-
-default_emulate_rc_corner
-
-
-Generated self-contained design powerplann_1.inn.dat
-*** Message Summary: 0 warning(s), 0 error(s)
-
-0
-[DEV]innovus 22> get_multi_cpu_usage -local_cpu
-place_design -no_pre_place_opt
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-*** Starting place_design default flow ***
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-**INFO: Analyzing IO path groups for slack adjustment
-Multithreaded Timing Analysis is initialized with 8 threads
-
-Effort level <high> specified for reg2reg_tmp.46557 path_group
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: neo430_top
-# Design Mode: 90nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in Single mode...
-siFlow : Timing analysis mode is single, using late cdB files
-Total number of fetched objects 115710
-AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2256.37 CPU=0:00:29.7 REAL=0:00:04.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Deleted 0 physical inst  (cell - / prefix -).
-Did not delete 56644 physical insts as they were marked preplaced.
-*** Starting "NanoPlace(TM) placement v#1 (mem=2240.6M)" ...
-*** Build Buffered Sizing Timing Model
-(cpu=0:00:04.2 mem=2240.6M) ***
-*** Build Virtual Sizing Timing Model
-(cpu=0:00:05.0 mem=2240.6M) ***
-Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
-Scan chains were not defined.
-#std cell=169577 (56644 fixed + 112933 movable) #block=0 (0 floating + 0 preplaced)
-#ioInst=0 #net=113195 #term=406277 #term/net=3.59, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=174
-stdCell: 169577 single + 0 double + 0 multi
-Total standard cell length = 811.9572 (mm), area = 3.9624 (mm^2)
-Average module density = 0.907.
-Density for the design = 0.907.
-       = stdcell_area 1232177 sites (3788205 um^2) / alloc_area 1358885 sites (4177755 um^2).
-Pin Density = 0.2307.
-            = total # of pins 406277 / total area 1760724.
-Enabling multi-CPU acceleration with 8 CPU(s) for placement
-=== lastAutoLevel = 10 
-Found multi-fanin net twi_sda_io
-Found multi-fanin net twi_scl_io
-Found 2 (out of 113195) multi-fanin nets.
-Clock gating cells determined by native netlist tracing.
-Iteration  1: Total net bbox = 4.974e-06 (3.80e-06 1.17e-06)
-              Est.  stn bbox = 5.380e-06 (4.10e-06 1.28e-06)
-              cpu = 0:00:00.5 real = 0:00:00.0 mem = 2197.7M
-Iteration  2: Total net bbox = 4.974e-06 (3.80e-06 1.17e-06)
-              Est.  stn bbox = 5.380e-06 (4.10e-06 1.28e-06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2199.5M
-Iteration  3: Total net bbox = 6.314e+03 (3.25e+03 3.06e+03)
-              Est.  stn bbox = 8.734e+03 (4.52e+03 4.21e+03)
-              cpu = 0:00:12.1 real = 0:00:03.0 mem = 2365.1M
-Active setup views:
-    default_emulate_view
-Iteration  4: Total net bbox = 2.743e+06 (7.61e+05 1.98e+06)
-              Est.  stn bbox = 4.492e+06 (1.34e+06 3.16e+06)
-              cpu = 0:01:11 real = 0:00:13.0 mem = 2365.1M
-Iteration  5: Total net bbox = 3.218e+06 (1.35e+06 1.87e+06)
-              Est.  stn bbox = 5.415e+06 (2.19e+06 3.22e+06)
-              cpu = 0:01:11 real = 0:00:14.0 mem = 2365.1M
-Iteration  6: Total net bbox = 5.319e+06 (2.12e+06 3.20e+06)
-              Est.  stn bbox = 8.141e+06 (3.21e+06 4.93e+06)
-              cpu = 0:01:33 real = 0:00:16.0 mem = 2455.1M
-
-Iteration  7: Total net bbox = 6.091e+06 (2.54e+06 3.55e+06)
-              Est.  stn bbox = 8.916e+06 (3.63e+06 5.29e+06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2359.1M
-Iteration  8: Total net bbox = 6.103e+06 (2.54e+06 3.56e+06)
-              Est.  stn bbox = 8.929e+06 (3.63e+06 5.30e+06)
-              cpu = 0:01:28 real = 0:00:51.0 mem = 2240.1M
-Iteration  9: Total net bbox = 6.021e+06 (2.63e+06 3.39e+06)
-              Est.  stn bbox = 8.859e+06 (3.75e+06 5.11e+06)
-              cpu = 0:02:35 real = 0:00:31.0 mem = 2360.5M
-Iteration 10: Total net bbox = 6.082e+06 (2.67e+06 3.41e+06)
-              Est.  stn bbox = 8.924e+06 (3.79e+06 5.13e+06)
-              cpu = 0:01:26 real = 0:00:49.0 mem = 2275.1M
-Iteration 11: Total net bbox = 6.167e+06 (2.72e+06 3.45e+06)
-              Est.  stn bbox = 9.018e+06 (3.85e+06 5.16e+06)
-              cpu = 0:02:40 real = 0:00:33.0 mem = 2372.5M
-Iteration 12: Total net bbox = 6.251e+06 (2.76e+06 3.49e+06)
-              Est.  stn bbox = 9.107e+06 (3.90e+06 5.21e+06)
-              cpu = 0:01:16 real = 0:00:43.0 mem = 2273.2M
-Iteration 13: Total net bbox = 6.257e+06 (2.78e+06 3.47e+06)
-              Est.  stn bbox = 9.132e+06 (3.93e+06 5.20e+06)
-              cpu = 0:02:19 real = 0:00:29.0 mem = 2381.4M
-Iteration 14: Total net bbox = 6.257e+06 (2.78e+06 3.47e+06)
-              Est.  stn bbox = 9.132e+06 (3.93e+06 5.20e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2381.4M
-Iteration 15: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:01:46 real = 0:00:24.0 mem = 2397.2M
-Iteration 16: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2397.2M
-Iteration 17: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2397.2M
-*** cost = 6.545e+06 (2.90e+06 3.65e+06) (cpu for global=0:17:57) real=0:05:16***
-Placement multithread real runtime: 0:05:16 with 8 threads.
-Info: 6223 clock gating cells identified, 6223 (on average) moved
-neo430_top
-neo430_top
-Core Placement runtime cpu: 0:13:20 real: 0:02:39
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'INX20'.
-Type 'man IMPSP-270' for more detail.
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'BUX20'.
-Type 'man IMPSP-270' for more detail.
-*** Starting place_detail (0:41:49 mem=2052.6M) ***
-Total net bbox length = 6.545e+06 (2.899e+06 3.645e+06) (ext = 6.275e+05)
-Density distribution unevenness ratio = 3.292%
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1359.540 1837.930), there is no legal location for instance "g11181" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1403.010 1930.650), there is no legal location for instance "g11189" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1437.030 2072.170), there is no legal location for instance "g11179" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1438.920 1959.930), there is no legal location for instance "g11170" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (376.110 417.850), there is no legal location for instance "neo430_imem_inst/g199249" ( cell: "INX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**ERROR: (IMPSP-2021):	Could not legalize <5> instances in the design. Check warning message IMPSP-270, IMPSP-452, IMPSP-2024, IMPSP-2039, IMPSP-2040, IMPSP-2042 or IMPSP-2020 in log file for more details.
-Type 'man IMPSP-2021' for more detail.
-Move report: Detail placement moves 112933 insts, mean move: 12.87 um, max move: 221.10 um
-	Max move on inst (neo430_imem_inst/imem_file_ram_h_reg[224][3]): (1216.80, 1622.34) --> (1437.03, 1623.21)
-	Runtime: CPU: 0:00:27.6 REAL: 0:00:19.0 MEM: 2117.3MB
-Summary Report:
-Instances move: 112933 (out of 112933 movable)
-Instances flipped: 0
-Mean displacement: 12.87 um
-Max displacement: 221.10 um (Instance: neo430_imem_inst/imem_file_ram_h_reg[224][3]) (1216.8, 1622.34) -> (1437.03, 1623.21)
-	Length: 17 sites, height: 1 rows, site name: core, cell type: DFRQX1
-	Violation at original loc: Placement Blockage Violation
-Total net bbox length = 7.056e+06 (3.318e+06 3.738e+06) (ext = 6.268e+05)
-Runtime: CPU: 0:00:27.8 REAL: 0:00:21.0 MEM: 2117.3MB
-*** Finished place_detail (0:42:17 mem=2117.3M) ***
-*** End of Placement (cpu=0:19:06, real=0:06:07, mem=2117.3M) ***
-default core: bins with density >  0.75 = 40.4 % ( 951 / 2352 )
-Density distribution unevenness ratio = 3.362%
-*** Free Virtual Timing Model ...(mem=2117.3M)
+#setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+#setNanoRouteMode -routeReserveSpaceForMultiCut true
+#setNanoRouteMode -routeWithSiDriven true
+#setNanoRouteMode -routeWithTimingDriven true
+#Start globalRoute on Tue Mar  7 13:31:45 2023
+#
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT8SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT8SMP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT8P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT4SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT4SMP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT4P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT2SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT2P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT24SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT24SMP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT24P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT1P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT16SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT16SMP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BT16P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BOTGD8SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BOTGD8SMP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BOTGD8P does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BOTGD4SP does not have antenna diff area.
+#WARNING (NRDB-728) PIN PAD in CELL_VIEW BOTGD4SMP does not have antenna diff area.
+#WARNING (EMS-27) Message (NRDB-728) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/gpio_o[15] of net gpio_o[15] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/gpio_o[14] of net gpio_o[14] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_we_o of net wb_we_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[3] of net wb_sel_o[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[2] of net wb_sel_o[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[1] of net wb_sel_o[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[0] of net wb_sel_o[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_stb_o of net wb_stb_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_cyc_o of net wb_cyc_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_ack_i of net wb_ack_i because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[7] of net ext_irq_i[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[6] of net ext_irq_i[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[5] of net ext_irq_i[5] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[4] of net ext_irq_i[4] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[3] of net ext_irq_i[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[2] of net ext_irq_i[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[1] of net ext_irq_i[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[0] of net ext_irq_i[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_ack_o[7] of net ext_ack_o[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_ack_o[6] of net ext_ack_o[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (EMS-27) Message (NRIG-39) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#NanoRoute Version 16.17-s018_1 NR170729-1044/16_17-UB
+#Start routing data preparation.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET1 is not specified for width 0.230.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET2 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET1 is not specified for width 0.230.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET2 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET2 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET3 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET2 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET3 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET3 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET4 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET3 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET4 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET4 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET5 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET4 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER MET5 is not specified for width 0.280.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET5 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER METTP is not specified for width 0.440.
+#WARNING (NRDB-2077) The below via enclosure for LAYER MET5 is not specified for width 0.280.
+#WARNING (NRDB-2078) The above via enclosure for LAYER METTP is not specified for width 0.440.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.800.
+#Voltage range [0.000 - 0.000] has 3 nets.
+#Voltage range [0.000 - 1.800] has 119768 nets.
+#Voltage range [1.800 - 1.800] has 1 net.
+# MET1         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.485
+# MET2         V   Track-Pitch = 0.630    Line-2-Via Pitch = 0.560
+# MET3         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.560
+# MET4         V   Track-Pitch = 0.630    Line-2-Via Pitch = 0.560
+# MET5         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.560
+# METTP        V   Track-Pitch = 1.260    Line-2-Via Pitch = 0.950
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer MET3's pitch = 0.610.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:06, elapsed time = 00:00:06, memory = 1385.77 (MB), peak = 1415.26 (MB)
+#Merging special wires...
+#
+#Connectivity extraction summary:
+#115733 (96.63%) nets are without wires.
+#4039 nets are fixed|skipped|trivial (not extracted).
+#Total number of nets = 119772.
+#
+#Number of eco nets is 0
+#
+#Start data preparation...
+#
+#Data preparation is done on Tue Mar  7 13:31:57 2023
+#
+#Analyzing routing resource...
+#Routing resource analysis is done on Tue Mar  7 13:32:00 2023
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal 1        H        3825           0       65025    92.46%
+#  Metal 2        V        3710           0       65025     0.00%
+#  Metal 3        H        3825           0       65025     0.00%
+#  Metal 4        V        3710           0       65025     0.00%
+#  Metal 5        H        3825           0       65025     0.00%
+#  Metal 6        V        1855           0       65025     0.00%
+#  --------------------------------------------------------------
+#  Total                  20750       0.00%      390150    15.41%
+#
+#
+#
+#cpu time = 00:00:03, elapsed time = 00:00:03, memory = 1397.80 (MB), peak = 1415.26 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:04, elapsed time = 00:00:04, memory = 1409.63 (MB), peak = 1415.26 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:13, elapsed time = 00:00:13, memory = 1481.52 (MB), peak = 1481.52 (MB)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:17, elapsed time = 00:00:17, memory = 1507.22 (MB), peak = 1507.22 (MB)
+#
+#start global routing iteration 4...
+#cpu time = 00:02:22, elapsed time = 00:02:22, memory = 1528.49 (MB), peak = 1528.49 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 4039 (skipped).
+#Total number of routable nets = 115733.
+#Total number of nets in the design = 119772.
+#
+#115733 routable nets have only global wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default          115733  
+#-----------------------------
+#        Total          115733  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default          115733  
+#-----------------------------
+#        Total          115733  
+#-----------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon       OverCon       OverCon       OverCon          
+#                  #Gcell        #Gcell        #Gcell        #Gcell    %Gcell
+#     Layer         (1-2)         (3-4)         (5-6)         (7-8)   OverCon
+#  --------------------------------------------------------------------------
+#   Metal 1      0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 2    889(1.37%)    184(0.28%)     50(0.08%)      3(0.00%)   (1.73%)
+#   Metal 3      6(0.01%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.01%)
+#   Metal 4      0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 5      0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 6      0(0.00%)      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  --------------------------------------------------------------------------
+#     Total    895(0.25%)    184(0.05%)     50(0.01%)      3(0.00%)   (0.32%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 8
+#  Overflow after GR: 0.00% H + 0.58% V
+#
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+#Complete Global Routing.
+#Total wire length = 11657071 um.
+#Total half perimeter of net bounding box = 9034012 um.
+#Total wire length on LAYER MET1 = 73 um.
+#Total wire length on LAYER MET2 = 1901256 um.
+#Total wire length on LAYER MET3 = 3230491 um.
+#Total wire length on LAYER MET4 = 2757369 um.
+#Total wire length on LAYER MET5 = 3085355 um.
+#Total wire length on LAYER METTP = 682526 um.
+#Total number of vias = 839658
+#Up-Via Summary (total 839658):
+#           
+#-----------------------
+#  Metal 1       402471
+#  Metal 2       297098
+#  Metal 3        86725
+#  Metal 4        45397
+#  Metal 5         7967
+#-----------------------
+#                839658 
+#
+#Max overcon = 8 tracks.
+#Total overcon = 0.32%.
+#Worst layer Gcell overcon rate = 0.01%.
+#cpu time = 00:03:01, elapsed time = 00:03:01, memory = 1528.68 (MB), peak = 1528.68 (MB)
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1483.74 (MB), peak = 1528.68 (MB)
+#Start Track Assignment.
+#Done with 231649 horizontal wires in 2 hboxes and 234358 vertical wires in 2 hboxes.
+#Done with 59302 horizontal wires in 2 hboxes and 57599 vertical wires in 2 hboxes.
+#Done with 2 horizontal wires in 2 hboxes and 2 vertical wires in 2 hboxes.
+#
+#Track assignment summary:
+#layer  (wire length)   (overlap)        (long ovlp) 
+#----------------------------------------------------
+#M1 	     59.74 	  5.32%  	  0.00%
+#M2 	1868736.23 	  0.20%  	  0.00%
+#M3 	3213404.63 	  0.24%  	  0.00%
+#M4 	2759070.35 	  0.04%  	  0.00%
+#M5 	3094140.65 	  0.02%  	  0.00%
+#M6 	 684586.83 	  0.01%  	  0.00%
+#----------------------------------------------------
+#All 	11619998.43  	  0.11% 	  0.00%
+#Complete Track Assignment.
+#Total wire length = 12108058 um.
+#Total half perimeter of net bounding box = 9034012 um.
+#Total wire length on LAYER MET1 = 305307 um.
+#Total wire length on LAYER MET2 = 1872641 um.
+#Total wire length on LAYER MET3 = 3359247 um.
+#Total wire length on LAYER MET4 = 2774849 um.
+#Total wire length on LAYER MET5 = 3110150 um.
+#Total wire length on LAYER METTP = 685863 um.
+#Total number of vias = 839659
+#Up-Via Summary (total 839659):
+#           
+#-----------------------
+#  Metal 1       402472
+#  Metal 2       297098
+#  Metal 3        86725
+#  Metal 4        45397
+#  Metal 5         7967
+#-----------------------
+#                839659 
+#
+#cpu time = 00:01:14, elapsed time = 00:01:14, memory = 1559.57 (MB), peak = 1559.57 (MB)
+#
+#
+#globalRoute statistics:
+#Cpu time = 00:04:31
+#Elapsed time = 00:04:31
+#Increased memory = 61.28 (MB)
+#Total memory = 1310.59 (MB)
+#Peak memory = 1559.70 (MB)
+#Number of warnings = 62
+#Total number of warnings = 63
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalRoute on Tue Mar  7 13:36:16 2023
+#
 UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:                                                                   final
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   global_place
-Starting congestion repair ...
-[NR-eGR] honorMsvRouteConstraint: false
-[NR-eGR] honorClockSpecNDR      : 0
-[NR-eGR] minRouteLayer          : 2
-[NR-eGR] maxRouteLayer          : 127
-[NR-eGR] numTracksPerClockWire  : 0
-[NR-eGR] Layer1 has no routable track
-[NR-eGR] Layer2 has single uniform track structure
-[NR-eGR] Layer3 has single uniform track structure
-[NR-eGR] Layer4 has single uniform track structure
-[NR-eGR] Layer5 has single uniform track structure
-[NR-eGR] Layer6 has single uniform track structure
-[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=45885 numBumpBlks=0 numBoundaryFakeBlks=0
-[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
-[NR-eGR] Read numTotalNets=113031  numIgnoredNets=0
-[NR-eGR] There are 6224 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id 0. Nets 113031 
-[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
-[NR-eGR] Pitch:  L1=460  L2=630  L3=610  L4=630  L5=610  L6=1260
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 113031 net(s) in layer range [2, 6]
-[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.05% H + 0.02% V. EstWL: 9.701250e+06um
-[NR-eGR] 
-[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.10% H + 0.05% V
-[NR-eGR] Overflow after earlyGlobalRoute 0.14% H + 0.06% V
-Local HotSpot Analysis: normalized max congestion hotspot area = 30.89, normalized total congestion hotspot area = 37.70 (area is in unit of 4 std-cell row bins)
-describeCongestion: hCong = 0.00 vCong = 0.00
-Start repairing congestion with level 4.
-Iteration  9: Total net bbox = 5.137e+06 (2.20e+06 2.93e+06)
-              Est.  stn bbox = 7.935e+06 (3.32e+06 4.61e+06)
-              cpu = 0:01:27 real = 0:00:17.0 mem = 2347.5M
-Iteration 10: Total net bbox = 5.181e+06 (2.23e+06 2.95e+06)
-              Est.  stn bbox = 7.991e+06 (3.35e+06 4.64e+06)
-              cpu = 0:01:36 real = 0:00:17.0 mem = 2347.5M
-Iteration 11: Total net bbox = 5.235e+06 (2.26e+06 2.98e+06)
-              Est.  stn bbox = 8.002e+06 (3.36e+06 4.64e+06)
-              cpu = 0:00:45.1 real = 0:00:10.0 mem = 2347.5M
-Iteration 12: Total net bbox = 5.380e+06 (2.32e+06 3.06e+06)
-              Est.  stn bbox = 8.149e+06 (3.43e+06 4.72e+06)
-              cpu = 0:00:25.8 real = 0:00:07.0 mem = 2347.5M
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'INX20'.
-Type 'man IMPSP-270' for more detail.
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'BUX20'.
-Type 'man IMPSP-270' for more detail.
-*** Starting place_detail (0:46:45 mem=2219.4M) ***
-Total net bbox length = 6.144e+06 (2.724e+06 3.420e+06) (ext = 6.284e+05)
-Density distribution unevenness ratio = 5.907%
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1416.240 1955.050), there is no legal location for instance "g11181" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1425.060 1969.690), there is no legal location for instance "g11189" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1449.630 1998.970), there is no legal location for instance "g11170" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1455.300 2111.210), there is no legal location for instance "g11179" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (369.810 447.130), there is no legal location for instance "neo430_imem_inst/g199249" ( cell: "INX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**ERROR: (IMPSP-2021):	Could not legalize <5> instances in the design. Check warning message IMPSP-270, IMPSP-452, IMPSP-2024, IMPSP-2039, IMPSP-2040, IMPSP-2042 or IMPSP-2020 in log file for more details.
-Type 'man IMPSP-2021' for more detail.
-Move report: Detail placement moves 112933 insts, mean move: 10.62 um, max move: 184.71 um
-	Max move on inst (neo430_imem_inst/imem_file_ram_h_reg[532][3]): (1038.66, 1624.38) --> (1222.20, 1623.21)
-	Runtime: CPU: 0:00:18.8 REAL: 0:00:11.0 MEM: 2183.9MB
-Summary Report:
-Instances move: 112933 (out of 112933 movable)
-Instances flipped: 0
-Mean displacement: 10.62 um
-Max displacement: 184.71 um (Instance: neo430_imem_inst/imem_file_ram_h_reg[532][3]) (1038.66, 1624.38) -> (1222.2, 1623.21)
-	Length: 17 sites, height: 1 rows, site name: core, cell type: DFRQX1
-	Violation at original loc: Placement Blockage Violation
-Total net bbox length = 6.881e+06 (3.265e+06 3.616e+06) (ext = 6.276e+05)
-Runtime: CPU: 0:00:19.0 REAL: 0:00:12.0 MEM: 2183.9MB
-*** Finished place_detail (0:47:04 mem=2183.9M) ***
-[NR-eGR] honorMsvRouteConstraint: false
-[NR-eGR] honorClockSpecNDR      : 0
-[NR-eGR] minRouteLayer          : 2
-[NR-eGR] maxRouteLayer          : 127
-[NR-eGR] numTracksPerClockWire  : 0
-[NR-eGR] Layer1 has no routable track
-[NR-eGR] Layer2 has single uniform track structure
-[NR-eGR] Layer3 has single uniform track structure
-[NR-eGR] Layer4 has single uniform track structure
-[NR-eGR] Layer5 has single uniform track structure
-[NR-eGR] Layer6 has single uniform track structure
-[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=45885 numBumpBlks=0 numBoundaryFakeBlks=0
-[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
-[NR-eGR] Read numTotalNets=113031  numIgnoredNets=0
-[NR-eGR] There are 6224 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id 0. Nets 113031 
-[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
-[NR-eGR] Pitch:  L1=460  L2=630  L3=610  L4=630  L5=610  L6=1260
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 113031 net(s) in layer range [2, 6]
-[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 9.517391e+06um
-[NR-eGR] 
-[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.01% H + 0.04% V
-[NR-eGR] Overflow after earlyGlobalRoute 0.01% H + 0.04% V
-Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
-describeCongestion: hCong = 0.00 vCong = 0.00
-[NR-eGR] Layer1(MET1)(F) length: 0.000000e+00um, number of vias: 405939
-[NR-eGR] Layer2(MET2)(V) length: 2.089920e+06um, number of vias: 574135
-[NR-eGR] Layer3(MET3)(H) length: 3.065845e+06um, number of vias: 107874
-[NR-eGR] Layer4(MET4)(V) length: 2.365390e+06um, number of vias: 50436
-[NR-eGR] Layer5(MET5)(H) length: 1.702003e+06um, number of vias: 7893
-[NR-eGR] Layer6(METTP)(V) length: 5.444853e+05um, number of vias: 0
-[NR-eGR] Total length: 9.767643e+06um, number of vias: 1146277
-End of congRepair (cpu=0:04:52, real=0:01:21)
-*** Finishing place_design default flow ***
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-***** Total cpu  0:24:54
-***** Total real time  0:7:58
-**place_design ... cpu = 0:24:54, real = 0: 7:58, mem = 2104.6M **
-Command spTest is not supported.
-
-*** Summary of all messages that are not suppressed in this session:
-Severity  ID               Count  Summary                                  
-WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
-WARNING   IMPSP-270            4  Cannot find a legal location for MASTER ...
-ERROR     IMPSP-9099           2  Scan chains exist in this design but are...
-ERROR     IMPSP-2021           2  Could not legalize <%d> instances in the...
-WARNING   IMPSP-2040          10  Within search radius %.3f um from center...
-*** Message Summary: 15 warning(s), 4 error(s)
-
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   final
 default_emulate_view
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-*** Starting place_design default flow ***
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-**INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.46557 path_group
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: neo430_top
-# Design Mode: 90nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in Single mode...
-Updating RC grid for preRoute extraction ...
-Initializing multi-corner capacitance tables ... 
-Initializing multi-corner resistance tables ...
-Total number of fetched objects 115710
-AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=2663.88 CPU=0:00:29.4 REAL=0:00:04.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-Deleted 0 physical inst  (cell - / prefix -).
-Did not delete 56644 physical insts as they were marked preplaced.
-*** Starting "NanoPlace(TM) placement v#1 (mem=2648.1M)" ...
-*** Build Buffered Sizing Timing Model
-(cpu=0:00:04.2 mem=2648.1M) ***
-*** Build Virtual Sizing Timing Model
-(cpu=0:00:05.0 mem=2648.1M) ***
-Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
-Scan chains were not defined.
-#std cell=169577 (56644 fixed + 112933 movable) #block=0 (0 floating + 0 preplaced)
-#ioInst=0 #net=113195 #term=406277 #term/net=3.59, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=174
-stdCell: 169577 single + 0 double + 0 multi
-Total standard cell length = 811.9572 (mm), area = 3.9624 (mm^2)
-Average module density = 0.907.
-Density for the design = 0.907.
-       = stdcell_area 1232177 sites (3788205 um^2) / alloc_area 1358885 sites (4177755 um^2).
-Pin Density = 0.2307.
-            = total # of pins 406277 / total area 1760724.
-Enabling multi-CPU acceleration with 8 CPU(s) for placement
-=== lastAutoLevel = 10 
-Found multi-fanin net twi_sda_io
-Found multi-fanin net twi_scl_io
-Found 2 (out of 113195) multi-fanin nets.
-Clock gating cells determined by native netlist tracing.
-Iteration  1: Total net bbox = 4.974e-06 (3.80e-06 1.17e-06)
-              Est.  stn bbox = 5.380e-06 (4.10e-06 1.28e-06)
-              cpu = 0:00:00.5 real = 0:00:00.0 mem = 2343.5M
-Iteration  2: Total net bbox = 4.974e-06 (3.80e-06 1.17e-06)
-              Est.  stn bbox = 5.380e-06 (4.10e-06 1.28e-06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2345.2M
-Iteration  3: Total net bbox = 6.314e+03 (3.25e+03 3.06e+03)
-              Est.  stn bbox = 8.734e+03 (4.52e+03 4.21e+03)
-              cpu = 0:00:10.0 real = 0:00:02.0 mem = 2494.4M
-Active setup views:
-    default_emulate_view
-Iteration  4: Total net bbox = 2.743e+06 (7.61e+05 1.98e+06)
-              Est.  stn bbox = 4.492e+06 (1.34e+06 3.16e+06)
-              cpu = 0:01:07 real = 0:00:13.0 mem = 2494.4M
-Iteration  5: Total net bbox = 3.218e+06 (1.35e+06 1.87e+06)
-              Est.  stn bbox = 5.415e+06 (2.19e+06 3.22e+06)
-              cpu = 0:01:09 real = 0:00:13.0 mem = 2494.4M
-Iteration  6: Total net bbox = 5.319e+06 (2.12e+06 3.20e+06)
-              Est.  stn bbox = 8.141e+06 (3.21e+06 4.93e+06)
-              cpu = 0:01:33 real = 0:00:16.0 mem = 2534.6M
-
-Iteration  7: Total net bbox = 6.091e+06 (2.54e+06 3.55e+06)
-              Est.  stn bbox = 8.916e+06 (3.63e+06 5.29e+06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 2406.6M
-Iteration  8: Total net bbox = 6.103e+06 (2.54e+06 3.56e+06)
-              Est.  stn bbox = 8.929e+06 (3.63e+06 5.30e+06)
-              cpu = 0:01:24 real = 0:00:48.0 mem = 2317.2M
-Iteration  9: Total net bbox = 6.021e+06 (2.63e+06 3.39e+06)
-              Est.  stn bbox = 8.859e+06 (3.75e+06 5.11e+06)
-              cpu = 0:02:35 real = 0:00:31.0 mem = 2402.6M
-Iteration 10: Total net bbox = 6.082e+06 (2.67e+06 3.41e+06)
-              Est.  stn bbox = 8.924e+06 (3.79e+06 5.13e+06)
-              cpu = 0:01:27 real = 0:00:50.0 mem = 2315.3M
-Iteration 11: Total net bbox = 6.167e+06 (2.72e+06 3.45e+06)
-              Est.  stn bbox = 9.018e+06 (3.85e+06 5.16e+06)
-              cpu = 0:02:43 real = 0:00:34.0 mem = 2410.1M
-Iteration 12: Total net bbox = 6.251e+06 (2.76e+06 3.49e+06)
-              Est.  stn bbox = 9.107e+06 (3.90e+06 5.21e+06)
-              cpu = 0:01:23 real = 0:00:48.0 mem = 2311.6M
-Iteration 13: Total net bbox = 6.257e+06 (2.78e+06 3.47e+06)
-              Est.  stn bbox = 9.132e+06 (3.93e+06 5.20e+06)
-              cpu = 0:02:20 real = 0:00:31.0 mem = 2417.0M
-Iteration 14: Total net bbox = 6.257e+06 (2.78e+06 3.47e+06)
-              Est.  stn bbox = 9.132e+06 (3.93e+06 5.20e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2417.0M
-Iteration 15: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:01:47 real = 0:00:24.0 mem = 2425.4M
-Iteration 16: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:00:00.2 real = 0:00:01.0 mem = 2425.4M
-Iteration 17: Total net bbox = 6.545e+06 (2.90e+06 3.65e+06)
-              Est.  stn bbox = 9.425e+06 (4.05e+06 5.37e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 2425.4M
-*** cost = 6.545e+06 (2.90e+06 3.65e+06) (cpu for global=0:18:00) real=0:05:20***
-Placement multithread real runtime: 0:05:20 with 8 threads.
-Info: 6223 clock gating cells identified, 6223 (on average) moved
-neo430_top
-neo430_top
-Core Placement runtime cpu: 0:13:17 real: 0:02:36
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'INX20'.
-Type 'man IMPSP-270' for more detail.
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'BUX20'.
-Type 'man IMPSP-270' for more detail.
-*** Starting place_detail (1:06:49 mem=2160.6M) ***
-Total net bbox length = 6.545e+06 (2.899e+06 3.645e+06) (ext = 6.275e+05)
-Density distribution unevenness ratio = 3.292%
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1359.540 1837.930), there is no legal location for instance "g11181" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1403.010 1930.650), there is no legal location for instance "g11189" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1437.030 2072.170), there is no legal location for instance "g11179" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1438.920 1959.930), there is no legal location for instance "g11170" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (376.110 417.850), there is no legal location for instance "neo430_imem_inst/g199249" ( cell: "INX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**ERROR: (IMPSP-2021):	Could not legalize <5> instances in the design. Check warning message IMPSP-270, IMPSP-452, IMPSP-2024, IMPSP-2039, IMPSP-2040, IMPSP-2042 or IMPSP-2020 in log file for more details.
-Type 'man IMPSP-2021' for more detail.
-Move report: Detail placement moves 112933 insts, mean move: 12.87 um, max move: 221.10 um
-	Max move on inst (neo430_imem_inst/imem_file_ram_h_reg[224][3]): (1216.80, 1622.34) --> (1437.03, 1623.21)
-	Runtime: CPU: 0:00:28.7 REAL: 0:00:21.0 MEM: 2189.7MB
-Summary Report:
-Instances move: 112933 (out of 112933 movable)
-Instances flipped: 0
-Mean displacement: 12.87 um
-Max displacement: 221.10 um (Instance: neo430_imem_inst/imem_file_ram_h_reg[224][3]) (1216.8, 1622.34) -> (1437.03, 1623.21)
-	Length: 17 sites, height: 1 rows, site name: core, cell type: DFRQX1
-	Violation at original loc: Placement Blockage Violation
-Total net bbox length = 7.056e+06 (3.318e+06 3.738e+06) (ext = 6.268e+05)
-Runtime: CPU: 0:00:28.9 REAL: 0:00:21.0 MEM: 2189.7MB
-*** Finished place_detail (1:07:18 mem=2189.7M) ***
-*** End of Placement (cpu=0:19:12, real=0:06:12, mem=2189.7M) ***
-default core: bins with density >  0.75 = 40.4 % ( 951 / 2352 )
-Density distribution unevenness ratio = 3.362%
-*** Free Virtual Timing Model ...(mem=2189.7M)
      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   final
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   global_place
-Starting congestion repair ...
-[NR-eGR] honorMsvRouteConstraint: false
-[NR-eGR] honorClockSpecNDR      : 0
-[NR-eGR] minRouteLayer          : 2
-[NR-eGR] maxRouteLayer          : 127
-[NR-eGR] numTracksPerClockWire  : 0
-[NR-eGR] Layer1 has no routable track
-[NR-eGR] Layer2 has single uniform track structure
-[NR-eGR] Layer3 has single uniform track structure
-[NR-eGR] Layer4 has single uniform track structure
-[NR-eGR] Layer5 has single uniform track structure
-[NR-eGR] Layer6 has single uniform track structure
-[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=45885 numBumpBlks=0 numBoundaryFakeBlks=0
-[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
-[NR-eGR] Read numTotalNets=113031  numIgnoredNets=0
-[NR-eGR] There are 6224 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id 0. Nets 113031 
-[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
-[NR-eGR] Pitch:  L1=460  L2=630  L3=610  L4=630  L5=610  L6=1260
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 113031 net(s) in layer range [2, 6]
-[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.05% H + 0.02% V. EstWL: 9.701250e+06um
-[NR-eGR] 
-[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.10% H + 0.05% V
-[NR-eGR] Overflow after earlyGlobalRoute 0.14% H + 0.06% V
-Local HotSpot Analysis: normalized max congestion hotspot area = 30.89, normalized total congestion hotspot area = 37.70 (area is in unit of 4 std-cell row bins)
-describeCongestion: hCong = 0.00 vCong = 0.00
-Start repairing congestion with level 4.
-Iteration  9: Total net bbox = 5.137e+06 (2.20e+06 2.93e+06)
-              Est.  stn bbox = 7.935e+06 (3.32e+06 4.61e+06)
-              cpu = 0:01:29 real = 0:00:18.0 mem = 2425.9M
-Iteration 10: Total net bbox = 5.181e+06 (2.23e+06 2.95e+06)
-              Est.  stn bbox = 7.991e+06 (3.35e+06 4.64e+06)
-              cpu = 0:01:37 real = 0:00:17.0 mem = 2425.9M
-Iteration 11: Total net bbox = 5.235e+06 (2.26e+06 2.98e+06)
-              Est.  stn bbox = 8.002e+06 (3.36e+06 4.64e+06)
-              cpu = 0:00:44.1 real = 0:00:09.0 mem = 2425.9M
-Iteration 12: Total net bbox = 5.380e+06 (2.32e+06 3.06e+06)
-              Est.  stn bbox = 8.149e+06 (3.43e+06 4.72e+06)
-              cpu = 0:00:26.0 real = 0:00:07.0 mem = 2435.0M
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'INX20'.
-Type 'man IMPSP-270' for more detail.
-**WARN: (IMPSP-270):	Cannot find a legal location for MASTER CELL 'BUX20'.
-Type 'man IMPSP-270' for more detail.
-*** Starting place_detail (1:11:51 mem=2306.9M) ***
-Total net bbox length = 6.144e+06 (2.724e+06 3.420e+06) (ext = 6.284e+05)
-Density distribution unevenness ratio = 5.907%
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1416.240 1955.050), there is no legal location for instance "g11181" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+UM:        294.86            388                                      route_design
+#route_design: cpu time = 00:04:37, elapsed time = 00:04:37, memory = 1308.06 (MB), peak = 1559.70 (MB)
+[DEV]innovus 3> route_detail
 
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1425.060 1969.690), there is no legal location for instance "g11189" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+route_detail
 
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1449.630 1998.970), there is no legal location for instance "g11170" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (1455.300 2111.210), there is no legal location for instance "g11179" ( cell: "BUX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**WARN: (IMPSP-2040):	Within search radius 624.640 um from center (369.810 447.130), there is no legal location for instance "neo430_imem_inst/g199249" ( cell: "INX20" ) due to "Region_Fence_Violation".
-Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
-
-**ERROR: (IMPSP-2021):	Could not legalize <5> instances in the design. Check warning message IMPSP-270, IMPSP-452, IMPSP-2024, IMPSP-2039, IMPSP-2040, IMPSP-2042 or IMPSP-2020 in log file for more details.
-Type 'man IMPSP-2021' for more detail.
-Move report: Detail placement moves 112933 insts, mean move: 10.62 um, max move: 184.71 um
-	Max move on inst (neo430_imem_inst/imem_file_ram_h_reg[532][3]): (1038.66, 1624.38) --> (1222.20, 1623.21)
-	Runtime: CPU: 0:00:18.1 REAL: 0:00:11.0 MEM: 2300.9MB
-Summary Report:
-Instances move: 112933 (out of 112933 movable)
-Instances flipped: 0
-Mean displacement: 10.62 um
-Max displacement: 184.71 um (Instance: neo430_imem_inst/imem_file_ram_h_reg[532][3]) (1038.66, 1624.38) -> (1222.2, 1623.21)
-	Length: 17 sites, height: 1 rows, site name: core, cell type: DFRQX1
-	Violation at original loc: Placement Blockage Violation
-Total net bbox length = 6.881e+06 (3.265e+06 3.616e+06) (ext = 6.276e+05)
-Runtime: CPU: 0:00:18.3 REAL: 0:00:11.0 MEM: 2300.9MB
-*** Finished place_detail (1:12:09 mem=2300.9M) ***
-[NR-eGR] honorMsvRouteConstraint: false
-[NR-eGR] honorClockSpecNDR      : 0
-[NR-eGR] minRouteLayer          : 2
-[NR-eGR] maxRouteLayer          : 127
-[NR-eGR] numTracksPerClockWire  : 0
-[NR-eGR] Layer1 has no routable track
-[NR-eGR] Layer2 has single uniform track structure
-[NR-eGR] Layer3 has single uniform track structure
-[NR-eGR] Layer4 has single uniform track structure
-[NR-eGR] Layer5 has single uniform track structure
-[NR-eGR] Layer6 has single uniform track structure
-[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=45885 numBumpBlks=0 numBoundaryFakeBlks=0
-[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
-[NR-eGR] Read numTotalNets=113031  numIgnoredNets=0
-[NR-eGR] There are 6224 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id 0. Nets 113031 
-[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
-[NR-eGR] Pitch:  L1=460  L2=630  L3=610  L4=630  L5=610  L6=1260
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 113031 net(s) in layer range [2, 6]
-[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 9.517391e+06um
-[NR-eGR] 
-[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.01% H + 0.04% V
-[NR-eGR] Overflow after earlyGlobalRoute 0.01% H + 0.04% V
-Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
-describeCongestion: hCong = 0.00 vCong = 0.00
-[NR-eGR] Layer1(MET1)(F) length: 0.000000e+00um, number of vias: 405939
-[NR-eGR] Layer2(MET2)(V) length: 2.089920e+06um, number of vias: 574135
-[NR-eGR] Layer3(MET3)(H) length: 3.065845e+06um, number of vias: 107874
-[NR-eGR] Layer4(MET4)(V) length: 2.365390e+06um, number of vias: 50436
-[NR-eGR] Layer5(MET5)(H) length: 1.702003e+06um, number of vias: 7893
-[NR-eGR] Layer6(METTP)(V) length: 5.444853e+05um, number of vias: 0
-[NR-eGR] Total length: 9.767643e+06um, number of vias: 1146277
-End of congRepair (cpu=0:04:55, real=0:01:22)
-*** Finishing place_design default flow ***
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-***** Total cpu  0:25:2
-***** Total real time  0:8:3
-**place_design ... cpu = 0:25: 2, real = 0: 8: 3, mem = 2159.5M **
-Command spTest is not supported.
-
-*** Summary of all messages that are not suppressed in this session:
-Severity  ID               Count  Summary                                  
-WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
-WARNING   IMPSP-270            4  Cannot find a legal location for MASTER ...
-ERROR     IMPSP-9099           2  Scan chains exist in this design but are...
-ERROR     IMPSP-2021           2  Could not legalize <%d> instances in the...
-WARNING   IMPSP-2040          10  Within search radius %.3f um from center...
-*** Message Summary: 15 warning(s), 4 error(s)
-
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   final
-default_emulate_view
-time_design -pre_place
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Setting High Fanout Nets ( > 100 ) as ideal temporarily for -prePlace option
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: neo430_top
-# Design Mode: 90nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in Single mode...
-Updating RC grid for preRoute extraction ...
-Initializing multi-corner capacitance tables ... 
-Initializing multi-corner resistance tables ...
+#Start route_detail on Tue Mar  7 13:41:14 2023
+#
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/gpio_o[15] of net gpio_o[15] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/gpio_o[14] of net gpio_o[14] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_we_o of net wb_we_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[3] of net wb_sel_o[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[2] of net wb_sel_o[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[1] of net wb_sel_o[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_sel_o[0] of net wb_sel_o[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_stb_o of net wb_stb_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_cyc_o of net wb_cyc_o because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/wb_ack_i of net wb_ack_i because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[7] of net ext_irq_i[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[6] of net ext_irq_i[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[5] of net ext_irq_i[5] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[4] of net ext_irq_i[4] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[3] of net ext_irq_i[3] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[2] of net ext_irq_i[2] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[1] of net ext_irq_i[1] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_irq_i[0] of net ext_irq_i[0] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_ack_o[7] of net ext_ack_o[7] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/ext_ack_o[6] of net ext_ack_o[6] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (EMS-27) Message (NRIG-39) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#NanoRoute Version 16.17-s018_1 NR170729-1044/16_17-UB
+#Start routing data preparation.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.800.
+#Voltage range [0.000 - 0.000] has 3 nets.
+#Voltage range [0.000 - 1.800] has 119768 nets.
+#Voltage range [1.800 - 1.800] has 1 net.
+# MET1         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.485
+# MET2         V   Track-Pitch = 0.630    Line-2-Via Pitch = 0.560
+# MET3         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.560
+# MET4         V   Track-Pitch = 0.630    Line-2-Via Pitch = 0.560
+# MET5         H   Track-Pitch = 0.610    Line-2-Via Pitch = 0.560
+# METTP        V   Track-Pitch = 1.260    Line-2-Via Pitch = 0.950
+#Using user defined Ggrids in DB.
+#Done routing data preparation.
+#cpu time = 00:00:04, elapsed time = 00:00:04, memory = 1443.00 (MB), peak = 1559.70 (MB)
+#Merging special wires...
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 14333
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop   CShort      Mar   WreExt   Totals
+#	MET1       1100      131       15        4        0        0     1250
+#	MET2       6380     1143        0        0      250     5281    13054
+#	MET3          4       22        0        0        2        1       29
+#	Totals     7484     1296       15        4      252     5282    14333
+#cpu time = 00:13:07, elapsed time = 00:13:07, memory = 1573.91 (MB), peak = 1577.86 (MB)
+#start 1st optimization iteration ...
+#    completing 10% with 13417 violations
+#    cpu time = 00:00:32, elapsed time = 00:00:32, memory = 1571.05 (MB), peak = 1602.74 (MB)
+#    completing 20% with 12492 violations
+#    cpu time = 00:01:03, elapsed time = 00:01:03, memory = 1571.77 (MB), peak = 1602.74 (MB)
+#    completing 30% with 11515 violations
+#    cpu time = 00:01:33, elapsed time = 00:01:33, memory = 1569.30 (MB), peak = 1602.74 (MB)
+#    completing 40% with 10597 violations
+#    cpu time = 00:02:01, elapsed time = 00:02:01, memory = 1566.89 (MB), peak = 1602.74 (MB)
+#    completing 50% with 9582 violations
+#    cpu time = 00:02:35, elapsed time = 00:02:35, memory = 1567.48 (MB), peak = 1602.74 (MB)
+#    completing 60% with 8587 violations
+#    cpu time = 00:03:10, elapsed time = 00:03:10, memory = 1565.77 (MB), peak = 1602.74 (MB)
+#    completing 70% with 7602 violations
+#    cpu time = 00:03:45, elapsed time = 00:03:45, memory = 1567.92 (MB), peak = 1602.74 (MB)
+#    completing 80% with 6570 violations
+#    cpu time = 00:04:20, elapsed time = 00:04:20, memory = 1567.86 (MB), peak = 1602.74 (MB)
+#    completing 90% with 5529 violations
+#    cpu time = 00:04:56, elapsed time = 00:04:56, memory = 1569.02 (MB), peak = 1602.74 (MB)
+#    completing 100% with 4575 violations
+#    cpu time = 00:05:26, elapsed time = 00:05:26, memory = 1561.98 (MB), peak = 1602.74 (MB)
+#   number of violations = 4575
+#
+#    By Layer and Type :
+#	         MetSpc    NSMet    Short     Loop   CShort      Mar   WreExt   Totals
+#	MET1        233        0       62        9        1        0        0      305
+#	MET2       2198        1      425        1        0        7     1590     4222
+#	MET3         12        0       28        1        0        3        3       47
+#	MET4          0        0        0        0        0        0        1        1
+#	Totals     2443        1      515       11        1       10     1594     4575
+#    number of process antenna violations = 81808
+#cpu time = 00:05:27, elapsed time = 00:05:27, memory = 1561.98 (MB), peak = 1602.74 (MB)
+#start 2nd optimization iteration ...
+#    completing 10% with 4399 violations
+#    cpu time = 00:00:16, elapsed time = 00:00:16, memory = 1567.32 (MB), peak = 1602.74 (MB)
+#    completing 20% with 4201 violations
+#    cpu time = 00:00:30, elapsed time = 00:00:30, memory = 1568.43 (MB), peak = 1602.74 (MB)
+#    completing 30% with 3983 violations
+#    cpu time = 00:00:44, elapsed time = 00:00:44, memory = 1566.97 (MB), peak = 1602.74 (MB)
+#    completing 40% with 3738 violations
+#    cpu time = 00:00:58, elapsed time = 00:00:58, memory = 1568.66 (MB), peak = 1602.74 (MB)
+#    completing 50% with 3581 violations
+#    cpu time = 00:01:12, elapsed time = 00:01:12, memory = 1568.77 (MB), peak = 1602.74 (MB)
+#    completing 60% with 3378 violations
+#    cpu time = 00:01:25, elapsed time = 00:01:25, memory = 1565.81 (MB), peak = 1602.74 (MB)
+#    completing 70% with 3228 violations
+#    cpu time = 00:01:36, elapsed time = 00:01:36, memory = 1567.52 (MB), peak = 1602.74 (MB)
+#    completing 80% with 3066 violations
+#    cpu time = 00:01:48, elapsed time = 00:01:48, memory = 1565.00 (MB), peak = 1602.74 (MB)
+#    completing 90% with 2885 violations
+#    cpu time = 00:02:00, elapsed time = 00:02:00, memory = 1567.46 (MB), peak = 1602.74 (MB)
+#    completing 100% with 2708 violations
+#    cpu time = 00:02:11, elapsed time = 00:02:11, memory = 1564.68 (MB), peak = 1602.74 (MB)
+#   number of violations = 2708
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1        125       32        8        0        0      165
+#	MET2       1067      460        0       12      990     2529
+#	MET3          3        7        0        1        3       14
+#	Totals     1195      499        8       13      993     2708
+#    number of process antenna violations = 81803
+#cpu time = 00:02:11, elapsed time = 00:02:11, memory = 1564.68 (MB), peak = 1602.74 (MB)
+#start 3rd optimization iteration ...
+#    completing 10% with 2640 violations
+#    cpu time = 00:00:41, elapsed time = 00:00:41, memory = 1565.61 (MB), peak = 1602.74 (MB)
+#    completing 20% with 2550 violations
+#    cpu time = 00:01:20, elapsed time = 00:01:20, memory = 1567.20 (MB), peak = 1602.74 (MB)
+#    completing 30% with 2499 violations
+#    cpu time = 00:01:59, elapsed time = 00:01:59, memory = 1568.68 (MB), peak = 1602.74 (MB)
+#    completing 40% with 2423 violations
+#    cpu time = 00:02:39, elapsed time = 00:02:39, memory = 1570.13 (MB), peak = 1602.74 (MB)
+#    completing 50% with 2363 violations
+#    cpu time = 00:03:20, elapsed time = 00:03:20, memory = 1569.89 (MB), peak = 1602.74 (MB)
+#    completing 60% with 2328 violations
+#    cpu time = 00:04:00, elapsed time = 00:04:00, memory = 1571.30 (MB), peak = 1602.74 (MB)
+#    completing 70% with 2288 violations
+#    cpu time = 00:04:41, elapsed time = 00:04:41, memory = 1573.81 (MB), peak = 1602.74 (MB)
+#    completing 80% with 2253 violations
+#    cpu time = 00:05:20, elapsed time = 00:05:20, memory = 1571.61 (MB), peak = 1602.74 (MB)
+#    completing 90% with 2025 violations
+#    cpu time = 00:05:58, elapsed time = 00:05:58, memory = 1573.16 (MB), peak = 1602.74 (MB)
+#    completing 100% with 1792 violations
+#    cpu time = 00:06:40, elapsed time = 00:06:40, memory = 1572.27 (MB), peak = 1602.74 (MB)
+#   number of violations = 1792
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1        106       31        8        0        0      145
+#	MET2        603      271        0        9      755     1638
+#	MET3          1        4        0        1        2        8
+#	MET4          0        0        0        0        0        0
+#	MET5          0        0        0        0        0        0
+#	METTP         1        0        0        0        0        1
+#	Totals      711      306        8       10      757     1792
+#    number of process antenna violations = 81989
+#cpu time = 00:06:40, elapsed time = 00:06:40, memory = 1572.27 (MB), peak = 1602.74 (MB)
+#start 4th optimization iteration ...
+#    completing 10% with 1792 violations
+#    cpu time = 00:00:15, elapsed time = 00:00:15, memory = 1573.66 (MB), peak = 1602.74 (MB)
+#    completing 20% with 1790 violations
+#    cpu time = 00:00:25, elapsed time = 00:00:25, memory = 1571.62 (MB), peak = 1602.74 (MB)
+#    completing 30% with 1788 violations
+#    cpu time = 00:00:36, elapsed time = 00:00:36, memory = 1574.64 (MB), peak = 1602.74 (MB)
+#    completing 40% with 1783 violations
+#    cpu time = 00:00:48, elapsed time = 00:00:48, memory = 1570.32 (MB), peak = 1602.74 (MB)
+#    completing 50% with 1766 violations
+#    cpu time = 00:00:59, elapsed time = 00:00:59, memory = 1576.21 (MB), peak = 1602.74 (MB)
+#    completing 60% with 1779 violations
+#    cpu time = 00:01:10, elapsed time = 00:01:10, memory = 1571.84 (MB), peak = 1602.74 (MB)
+#    completing 70% with 1759 violations
+#    cpu time = 00:01:23, elapsed time = 00:01:23, memory = 1573.35 (MB), peak = 1602.74 (MB)
+#    completing 80% with 1765 violations
+#    cpu time = 00:01:35, elapsed time = 00:01:35, memory = 1574.24 (MB), peak = 1602.74 (MB)
+#    completing 90% with 1760 violations
+#    cpu time = 00:01:46, elapsed time = 00:01:46, memory = 1574.14 (MB), peak = 1602.74 (MB)
+#    completing 100% with 1756 violations
+#    cpu time = 00:01:57, elapsed time = 00:01:57, memory = 1574.68 (MB), peak = 1602.74 (MB)
+#   number of violations = 1756
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1        102       30        8        0        0      140
+#	MET2        520      322        0       10      761     1613
+#	MET3          2        0        0        0        0        2
+#	MET4          0        0        0        0        0        0
+#	MET5          0        0        0        0        0        0
+#	METTP         1        0        0        0        0        1
+#	Totals      625      352        8       10      761     1756
+#    number of process antenna violations = 19960
+#cpu time = 00:01:57, elapsed time = 00:01:57, memory = 1574.68 (MB), peak = 1602.74 (MB)
+#start 5th optimization iteration ...
+#   number of violations = 1620
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop   CutSpc      Mar   WreExt   Totals
+#	MET1        101       29        7        0        0        0      137
+#	MET2        555      274        0        1        6      645     1481
+#	MET3          1        0        0        0        0        0        1
+#	MET4          0        0        0        0        0        0        0
+#	MET5          0        0        0        0        0        0        0
+#	METTP         1        0        0        0        0        0        1
+#	Totals      658      303        7        1        6      645     1620
+#    number of process antenna violations = 9484
+#cpu time = 00:01:00, elapsed time = 00:01:00, memory = 1575.07 (MB), peak = 1602.74 (MB)
+#start 6th optimization iteration ...
+#   number of violations = 1540
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         81       28        5        0        0      114
+#	MET2        491      298        0       30      606     1425
+#	MET3          0        0        1        0        0        1
+#	Totals      572      326        6       30      606     1540
+#    number of process antenna violations = 8001
+#cpu time = 00:01:41, elapsed time = 00:01:41, memory = 1587.21 (MB), peak = 1602.74 (MB)
+#start 7th optimization iteration ...
+#   number of violations = 1510
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         78       27        5        0        0      110
+#	MET2        464      296        1       14      620     1395
+#	MET3          3        1        0        0        1        5
+#	Totals      545      324        6       14      621     1510
+#    number of process antenna violations = 7885
+#cpu time = 00:01:52, elapsed time = 00:01:52, memory = 1588.59 (MB), peak = 1602.74 (MB)
+#start 8th optimization iteration ...
+#   number of violations = 1486
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         80       28        5        0        0      113
+#	MET2        464      262        0       20      626     1372
+#	MET3          0        0        0        0        0        0
+#	MET4          0        0        0        0        0        0
+#	MET5          1        0        0        0        0        1
+#	Totals      545      290        5       20      626     1486
+#    number of process antenna violations = 8070
+#cpu time = 00:01:32, elapsed time = 00:01:32, memory = 1587.60 (MB), peak = 1602.74 (MB)
+#start 9th optimization iteration ...
+#   number of violations = 1445
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         72       21        5        0        0       98
+#	MET2        418      293        0       19      616     1346
+#	MET3          1        0        0        0        0        1
+#	Totals      491      314        5       19      616     1445
+#    number of process antenna violations = 7649
+#cpu time = 00:01:22, elapsed time = 00:01:22, memory = 1587.58 (MB), peak = 1602.74 (MB)
+#start 10th optimization iteration ...
+#   number of violations = 1397
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         73       26        5        0        0      104
+#	MET2        447      258        1       23      563     1292
+#	MET3          0        1        0        0        0        1
+#	Totals      520      285        6       23      563     1397
+#    number of process antenna violations = 7559
+#cpu time = 00:01:23, elapsed time = 00:01:23, memory = 1586.34 (MB), peak = 1602.74 (MB)
+#start 11th optimization iteration ...
+#   number of violations = 1298
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         62       20        5        0        0       87
+#	MET2        385      286        0       27      511     1209
+#	MET3          2        0        0        0        0        2
+#	Totals      449      306        5       27      511     1298
+#    number of process antenna violations = 7645
+#cpu time = 00:02:46, elapsed time = 00:02:46, memory = 1611.95 (MB), peak = 1618.63 (MB)
+#start 12th optimization iteration ...
+#   number of violations = 1306
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         61       20        5        0        0       86
+#	MET2        370      268        0       53      527     1218
+#	MET3          1        1        0        0        0        2
+#	Totals      432      289        5       53      527     1306
+#    number of process antenna violations = 7827
+#cpu time = 00:02:24, elapsed time = 00:02:24, memory = 1607.11 (MB), peak = 1618.63 (MB)
+#start 13th optimization iteration ...
+#   number of violations = 1265
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         59       18        5        0        0       82
+#	MET2        384      250        0       14      535     1183
+#	Totals      443      268        5       14      535     1265
+#    number of process antenna violations = 7593
+#cpu time = 00:02:05, elapsed time = 00:02:05, memory = 1608.17 (MB), peak = 1618.63 (MB)
+#start 14th optimization iteration ...
+#   number of violations = 1291
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop      Mar   WreExt   Totals
+#	MET1         60       19        5        0        0       84
+#	MET2        365      269        0       51      522     1207
+#	Totals      425      288        5       51      522     1291
+#cpu time = 00:02:05, elapsed time = 00:02:05, memory = 1609.98 (MB), peak = 1618.63 (MB)
+#start 15th optimization iteration ...
+#   number of violations = 817
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop   CutSpc      Mar   WreExt   Totals
+#	MET1          4        0        0        0        0        0        4
+#	MET2        292      177        1        1       15      327      813
+#	Totals      296      177        1        1       15      327      817
+#cpu time = 00:02:15, elapsed time = 00:02:15, memory = 1620.53 (MB), peak = 1624.46 (MB)
+#start 16th optimization iteration ...
+#   number of violations = 816
+#
+#    By Layer and Type :
+#	         MetSpc    Short      Mar   WreExt   Totals
+#	MET1          2        0        0        0        2
+#	MET2        267      187       68      292      814
+#	Totals      269      187       68      292      816
+#cpu time = 00:02:09, elapsed time = 00:02:09, memory = 1639.05 (MB), peak = 1642.20 (MB)
+#start 17th optimization iteration ...
+#   number of violations = 806
+#
+#    By Layer and Type :
+#	         MetSpc    Short      Mar   WreExt   Totals
+#	MET1          1        0        0        0        1
+#	MET2        267      186       23      329      805
+#	Totals      268      186       23      329      806
+#cpu time = 00:02:00, elapsed time = 00:01:59, memory = 1637.53 (MB), peak = 1642.20 (MB)
+#start 18th optimization iteration ...
+#   number of violations = 812
+#
+#    By Layer and Type :
+#	         MetSpc    Short      Mar   WreExt   Totals
+#	MET1          2        0        0        0        2
+#	MET2        268      179       62      301      810
+#	Totals      270      179       62      301      812
+#cpu time = 00:02:00, elapsed time = 00:02:00, memory = 1642.59 (MB), peak = 1643.70 (MB)
+#start 19th optimization iteration ...
+#   number of violations = 791
+#
+#    By Layer and Type :
+#	         MetSpc    Short      Mar   WreExt   Totals
+#	MET1          1        0        0        0        1
+#	MET2        264      183       16      327      790
+#	Totals      265      183       16      327      791
+#cpu time = 00:02:16, elapsed time = 00:02:15, memory = 1637.26 (MB), peak = 1643.70 (MB)
+#start 20th optimization iteration ...
 
 *** INTERRUPTED *** [signal 1]

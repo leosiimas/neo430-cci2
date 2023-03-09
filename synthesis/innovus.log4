@@ -4,7 +4,7 @@ Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
 
 Version:	v16.17-s018_1, built Thu Aug 31 09:57:10 PDT 2017
 Options:	-common_ui 
-Date:		Thu Feb 23 04:58:14 2023
+Date:		Thu Mar  9 04:09:50 2023
 Host:		pgmicro04 (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (10cores*20cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
 OS:		CentOS Linux release 7.9.2009 (Core)
 
@@ -18,13 +18,17 @@ INFO:    You have enabled the Common UI that has been internally qualified at Ca
          to qualify your usage and make sure it meets your needs before deploying it widely.
 ***************************************************************************************
 
-Create and set the environment variable TMPDIR to /tmp/innovus_temp_32079_pgmicro04_leonardo.abreu_pEJDsN.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_18993_pgmicro04_leonardo.abreu_QLwEpM.
 
 
 **INFO:  MMMC transition support version v31-84 
 
 Loading fill procedures ...
-[DEV]innovus 1> eval_legacy {source powerplann_1.inn}
+[DEV]innovus 1> eval_legacy {source routing_01.inn }
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Set Using Default Delay Limit as 1000.
 Set Default Input Pin Transition as 0.1 ps.
 **WARN: (GLOBAL-100):	Global 'timing_enable_default_delay_arc' has become obsolete. It will be removed in the next release.
 Reading default_emulate_libset_max timing library '/pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib' ...
@@ -34,12 +38,12 @@ Reading default_emulate_libset_max timing library '/pdk/xfab/XC018_61_3.1.3/syno
 Read 414 cells in library 'IO_CELLS_5V_MOS5ST_typ_1_80V_4_50V_25C' 
 default_emulate_rc_corner
 
-Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/lef/xc018m6_FE.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/lef/xc018m6_FE.lef ...
 
-Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/lef/D_CELLS.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/lef/D_CELLS.lef ...
 Set DBUPerIGU to M2 pitch 630.
 
-Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/lef/IO_CELLS_5V.lef ...
+Loading LEF file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/lef/IO_CELLS_5V.lef ...
 **WARN: (IMPLF-200):	Pin 'PAD' in macro 'JTP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
 Type 'man IMPLF-200' for more detail.
 **WARN: (IMPLF-200):	Pin 'PAD' in macro 'JTGDP' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
@@ -125,12 +129,12 @@ Type 'man IMPLF-201' for more detail.
 **WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
 To increase the message display limit, refer to the product command reference manual.
 
-viaInitial starts at Thu Feb 23 05:00:56 2023
-viaInitial ends at Thu Feb 23 05:00:56 2023
-Loading view definition file from /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/viewDefinition.tcl
-*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.66min, fe_real=2.70min, fe_mem=569.3M) ***
-#- Begin Load netlist data ... (date=02/23 05:00:56, mem=569.3M)
-*** Begin netlist parsing (mem=569.3M) ***
+viaInitial starts at Thu Mar  9 04:10:59 2023
+viaInitial ends at Thu Mar  9 04:10:59 2023
+Loading view definition file from /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.41min, fe_real=1.15min, fe_mem=565.2M) ***
+#- Begin Load netlist data ... (date=03/09 04:10:59, mem=565.2M)
+*** Begin netlist parsing (mem=565.2M) ***
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\vdd! ' of cell 'FEEDCAP25LP' is defined in LEF but not in the timing library.
 **WARN: (IMPVL-159):	Pin '\gnd! ' of cell 'FEEDCAP25' is defined in LEF but not in the timing library.
@@ -2223,12 +2227,12 @@ Pin 'VDDR' of cell 'APR00DP' is declared as power/ground in LEF but as signal in
 Created 1225 new cells from 2 timing libraries.
 Reading netlist ...
 Backslashed names will retain backslash and a trailing blank character.
-Reading verilogBinary netlist '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.v.bin'
+Reading verilogBinary netlist '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.v.bin'
 Reading binary database version 1
 
-*** Memory Usage v#1 (Current mem = 1153.152M, initial mem = 181.020M) ***
-*** End netlist parsing (cpu=0:00:00.7, real=0:00:01.0, mem=1153.2M) ***
-#- End Load netlist data ... (date=02/23 05:00:57, total cpu=0:00:00.7, real=0:00:01.0, peak res=1153.2M, current mem=1153.2M)
+*** Memory Usage v#1 (Current mem = 1154.668M, initial mem = 181.020M) ***
+*** End netlist parsing (cpu=0:00:00.7, real=0:00:01.0, mem=1154.7M) ***
+#- End Load netlist data ... (date=03/09 04:11:00, total cpu=0:00:00.7, real=0:00:01.0, peak res=1154.7M, current mem=1154.7M)
 Top level cell is neo430_top.
 **WARN: (IMPTS-282):	Cell 'BT8SP' is not a level shifter cell but has 'input_signal_level' and 'output_signal_level' specified on pins, or it has different related_power_pin specified on input and output pins. To mark this cell as level shifter, use 'is_level_shifter' attribute.
 Type 'man IMPTS-282' for more detail.
@@ -2279,20 +2283,20 @@ No recursion found.
 Building hierarchical netlist for Cell neo430_top ...
 *** Netlist is unique.
 ** info: there are 7465 modules.
-** info: there are 112933 stdCell insts.
+** info: there are 115431 stdCell insts.
 
-*** Memory Usage v#1 (Current mem = 1179.164M, initial mem = 181.020M) ***
+*** Memory Usage v#1 (Current mem = 1180.680M, initial mem = 181.020M) ***
 *info: set bottom ioPad orient R0
 **WARN: (IMPFP-3961):	The techSite 'io_site_5V' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
 Type 'man IMPFP-3961' for more detail.
 Set Default Net Delay as 1000 ps.
 Set Default Net Load as 0.5 pF. 
 Set Default Input Pin Transition as 0.1 ps.
-Loading preference file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/gui.pref.tcl ...
+Loading preference file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/gui.pref.tcl ...
 default_emulate_view
 Extraction setup Started 
 Initializing multi-corner RC extraction with 1 active RC Corners ...
-Reading Capacitance Table File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/xc018m6_typ.capTbl ...
+Reading Capacitance Table File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/xc018m6_typ.capTbl ...
 Cap table was created using Encounter 07.10-s219_1.
 Process name: xc018m6_typ.
 **WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
@@ -2304,7 +2308,7 @@ Summary of Active RC-Corners :
     RC-Corner Name        : default_emulate_rc_corner
     RC-Corner Index       : 0
     RC-Corner Temperature : 25 Celsius
-    RC-Corner Cap Table   : '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/xc018m6_typ.capTbl'
+    RC-Corner Cap Table   : '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/xc018m6_typ.capTbl'
     RC-Corner PreRoute Res Factor         : 1
     RC-Corner PreRoute Cap Factor         : 1
     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
@@ -2315,21 +2319,21 @@ Summary of Active RC-Corners :
     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 
     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 
 *Info: initialize multi-corner CTS.
-Reading timing constraints file '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc' ...
-Current (total cpu=0:00:42.8, real=0:03:01, peak res=527.5M, current mem=900.9M)
+Reading timing constraints file '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc' ...
+Current (total cpu=0:00:28.1, real=0:01:25, peak res=524.3M, current mem=906.1M)
 neo430_top
 neo430_top
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221586).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221586).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221587).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221587).
 
-**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221588).
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk_i' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc, Line 221588).
 
 Number of path exceptions in the constraint file = 1
 Number of paths exceptions after getting compressed = 1
-INFO (CTE): Reading of timing constraints file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc completed, with 3 WARNING
-Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:00.0, peak res=541.8M, current mem=919.5M)
-Current (total cpu=0:00:43.5, real=0:03:01, peak res=541.8M, current mem=919.5M)
+INFO (CTE): Reading of timing constraints file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/libs/mmmc/neo430.default_emulate_constraint_mode.sdc completed, with 3 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:01.0, peak res=543.9M, current mem=924.9M)
+Current (total cpu=0:00:28.7, real=0:01:26, peak res=543.9M, current mem=924.9M)
 **WARN: (TA-976):	Path groups asserted by the group_path constraint are considered by the software to be global in nature - they cannot be restricted to specific constraint modes. Due to this restriction, the group_path constraint is not supported directly in the constraint files which are configured in mode-specific commands such as create_constraint_mode. The current group_path entry will be ignored. You can enter the group_path constraint interactively or as part of a general command script -  where it will be interpreted as global and will be in effect for all modes.
 Total number of combinational cells: 512
 Total number of sequential cells: 234
@@ -2356,44 +2360,119 @@ Total number of identified unusable delay cells: 0
 default_emulate_view
 default_emulate_view
 default_emulate_view
-#- Begin Load SymbolTable ... (date=02/23 05:01:16, mem=929.0M)
-#- End Load SymbolTable ... (date=02/23 05:01:16, total cpu=0:00:00.6, real=0:00:00.0, peak res=938.8M, current mem=938.8M)
-#- Begin Load floorplan data ... (date=02/23 05:01:16, mem=938.8M)
-Reading floorplan file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.fp.gz (mem = 938.8M).
-*info: reset 115823 existing net BottomPreferredLayer and AvoidDetour
+#- Begin Load SymbolTable ... (date=03/09 04:11:16, mem=934.4M)
+#- End Load SymbolTable ... (date=03/09 04:11:17, total cpu=0:00:00.6, real=0:00:01.0, peak res=944.4M, current mem=944.4M)
+#- Begin Load floorplan data ... (date=03/09 04:11:17, mem=944.4M)
+Reading floorplan file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.fp.gz (mem = 944.4M).
+*info: reset 119772 existing net BottomPreferredLayer and AvoidDetour
 Deleting old partition specification.
-Set FPlanBox to (0 0 2336670 2328980)
+Set FPlanBox to (0 0 2337300 2333860)
  ... processed partition successfully.
 Extracting standard cell pins and blockage ...... 
 Pin and blockage extraction finished
 Delete all existing relative floorplan constraints.
-*** End loading floorplan (cpu = 0:00:00.8, mem = 962.8M) ***
-#- End Load floorplan data ... (date=02/23 05:01:17, total cpu=0:00:00.8, real=0:00:01.0, peak res=962.8M, current mem=962.8M)
-#- Begin Load placement data ... (date=02/23 05:01:17, mem=962.8M)
+*** End loading floorplan (cpu = 0:00:00.8, mem = 968.4M) ***
+#- End Load floorplan data ... (date=03/09 04:11:17, total cpu=0:00:00.8, real=0:00:00.0, peak res=968.4M, current mem=968.4M)
+#- Begin Load placement data ... (date=03/09 04:11:17, mem=968.4M)
 *** Checked 4 GNC rules.
 *** applyConnectGlobalNets disabled.
-Reading placement file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.place.gz.
-** Reading stdCellPlacement "/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.place.gz" ...
-*** Completed restorePlace (cpu=0:00:00.6 real=0:00:01.0 mem=971.0M) ***
-Total net length = 2.314e+02 (1.157e+02 1.157e+02) (ext = 3.480e-01)
-#- End Load placement data ... (date=02/23 05:01:18, total cpu=0:00:00.7, real=0:00:01.0, peak res=971.0M, current mem=971.0M)
+Reading placement file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.place.gz.
+** Reading stdCellPlacement "/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.place.gz" ...
+*** Completed restorePlace (cpu=0:00:00.9 real=0:00:01.0 mem=990.6M) ***
+Total net length = 8.734e+06 (5.025e+06 3.709e+06) (ext = 1.767e+05)
+#- End Load placement data ... (date=03/09 04:11:18, total cpu=0:00:01.0, real=0:00:01.0, peak res=990.6M, current mem=990.6M)
 *** Checked 4 GNC rules.
 *** Applying global-net connections...
 *** Applied 4 GNC rules (cpu = 0:00:00.1)
-#- Begin Load routing data ... (date=02/23 05:01:18, mem=971.0M)
-Reading routing file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.route.gz.
-Reading Innovus routing data (Created by Innovus v16.17-s018_1 on Wed Feb 22 20:17:37 2023 Format: 16.1) ...
-*** Total 115702 nets are successfully restored.
-*** Completed restoreRoute (cpu=0:00:00.2 real=0:00:00.0 mem=971.0M) ***
-#- End Load routing data ... (date=02/23 05:01:18, total cpu=0:00:00.2, real=0:00:00.0, peak res=971.0M, current mem=971.0M)
-Reading property file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top.prop
-*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=971.0M) ***
+#- Begin Load routing data ... (date=03/09 04:11:18, mem=990.6M)
+Reading routing file - /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.route.gz.
+Reading Innovus routing data (Created by Innovus v16.17-s018_1 on Tue Mar  7 20:24:15 2023 Format: 16.1) ...
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+*** Total 119657 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:02.3 real=0:00:03.0 mem=1153.9M) ***
+#- End Load routing data ... (date=03/09 04:11:21, total cpu=0:00:02.3, real=0:00:03.0, peak res=1153.9M, current mem=1153.9M)
+Loading Drc markers ...
+... 2601 markers are loaded ...
+... 1666 geometry drc markers are loaded ...
+... 78 antenna drc markers are loaded ...
+Reading property file /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.prop
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Completed restoreProperty (cpu=0:00:00.6 real=0:00:00.0 mem=1153.9M) ***
 default_emulate_view
-#- Begin Load power constraints ... (date=02/23 05:01:18, mem=971.0M)
-source /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/powerplann_1.inn.dat/neo430_top_power_constraints.tcl
-#- End Load power constraints ... (date=02/23 05:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=971.0M, current mem=971.0M)
-#- Begin load AAE data ... (date=02/23 05:01:18, mem=971.0M)
-#- End load AAE data ... (date=02/23 05:01:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=971.0M, current mem=971.0M)
+**WARN: (IMPCK-8086):	The command specifyClockTree is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to a CCOpt-based flow.
+Checking spec file integrity...
+
+Reading clock tree spec file '/home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top.ctstch' ...
+
+RouteType               : FE_CTS_DEFAULT
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+RC Information for View default_emulate_view :
+Est. Cap                : 0.134357(V=0.13395 H=0.134764) (ff/um) [0.000134357]
+Est. Res                : 0.301629(V=0.301629 H=0.301629)(ohm/um) [0.000301629]
+Est. Via Res            : 4.25829(ohm) [8.23269]
+Est. Via Cap            : 0.183117(ff)
+M1(H) w=0.23(um) s=0.23(um) p=0.61(um) es=0.99(um) cap=0.128(ff/um) res=0.41(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=3.9744(ohm) viaCap=0.186661(ff)
+M3(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.135(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M4(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M5(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.132(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.181299(ff)
+M6(V) w=0.44(um) s=0.46(um) p=1.26(um) es=2.08(um) cap=0.11(ff/um) res=0.0836(ohm/um) viaRes=1.3248(ohm) viaCap=0.248205(ff)
+
+RouteType               : FE_CTS_DEFAULT_LEAF
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+RC Information for View default_emulate_view :
+Est. Cap                : 0.134357(V=0.13395 H=0.134764) (ff/um) [0.000134357]
+Est. Res                : 0.301629(V=0.301629 H=0.301629)(ohm/um) [0.000301629]
+Est. Via Res            : 4.25829(ohm) [8.23269]
+Est. Via Cap            : 0.183117(ff)
+M1(H) w=0.23(um) s=0.23(um) p=0.61(um) es=0.99(um) cap=0.128(ff/um) res=0.41(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=3.9744(ohm) viaCap=0.186661(ff)
+M3(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.135(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M4(V) w=0.28(um) s=0.28(um) p=0.63(um) es=0.98(um) cap=0.134(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.183117(ff)
+M5(H) w=0.28(um) s=0.28(um) p=0.61(um) es=0.94(um) cap=0.132(ff/um) res=0.302(ohm/um) viaRes=4.25829(ohm) viaCap=0.181299(ff)
+M6(V) w=0.44(um) s=0.46(um) p=1.26(um) es=2.08(um) cap=0.11(ff/um) res=0.0836(ohm/um) viaRes=1.3248(ohm) viaCap=0.248205(ff)
+
+Switching off Advanced RC Correlation modes in AAE mode.
+Active Analysis Views for CTS are,
+#1 default_emulate_view
+Default Analysis Views is default_emulate_view
+
+
+****** AutoClockRootPin ******
+AutoClockRootPin 1: clk_i
+# NoGating         NO
+# SetDPinAsSync    NO
+# SetIoPinAsSync   NO
+# SetAsyncSRPinAsSync   NO
+# SetTriStEnPinAsSync   NO
+# SetBBoxPinAsSync   NO
+# RouteClkNet      YES
+# PostOpt          YES
+# RouteType        FE_CTS_DEFAULT
+# LeafRouteType    FE_CTS_DEFAULT_LEAF
+
+***** !! NOTE !! *****
+
+CTS treats D-pins and I/O pins as non-synchronous pins by default.
+If you want to change the behavior, you need to use the SetDPinAsSync
+or SetIoPinAsSync statement in the clock tree specification file,
+or use the setCTSMode -traceDPinAsLeaf {true|false} command,
+or use the setCTSMode -traceIoPinAsLeaf {true|false} command
+before specifyClockTree command.
+
+*** End specifyClockTree (cpu=0:00:00.0, real=0:00:00.0, mem=1164.9M) ***
+#- Begin Load power constraints ... (date=03/09 04:11:22, mem=1164.9M)
+source /home/inf01185/leonardo.abreu/cci2/neo430-cci2/synthesis/routing_01.inn.dat/neo430_top_power_constraints.tcl
+'set_default_switching_activity' finished successfully.
+#- End Load power constraints ... (date=03/09 04:11:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1164.9M, current mem=1164.9M)
+#- Begin load AAE data ... (date=03/09 04:11:22, mem=1164.9M)
+#- End load AAE data ... (date=03/09 04:11:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=1164.9M, current mem=1164.9M)
 
 *** Summary of all messages that are not suppressed in this session:
 Severity  ID               Count  Summary                                  
@@ -2402,358 +2481,13 @@ WARNING   IMPLF-201          362  Pin '%s' in macro '%s' has no ANTENNADIF...
 WARNING   IMPFP-3961           1  The techSite '%s' has no related standar...
 WARNING   IMPTS-282           30  Cell '%s' is not a level shifter cell bu...
 WARNING   IMPEXT-2773          1  The via resistance between layers %s and...
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
 WARNING   IMPVL-159         1620  Pin '%s' of cell '%s' is defined in LEF ...
 WARNING   TA-976               1  Path groups asserted by the group_path c...
 WARNING   GLOBAL-100           1  Global '%s' has become obsolete. It will...
 WARNING   TCLNL-330            3  set_input_delay on clock root '%s' is no...
 WARNING   TECHLIB-436          1  Attribute '%s' on '%s' pin '%s' of cell ...
-*** Message Summary: 2454 warning(s), 0 error(s)
+*** Message Summary: 2455 warning(s), 0 error(s)
 
 3
-[DEV]innovus 2> place_design
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-*** Starting place_design default flow ***
-*** Start delete_buffer_trees ***
-Info: Detect buffers to remove automatically.
-Analyzing netlist ...
-Updating netlist
-siFlow : Timing analysis mode is single, using late cdB files
-
-*summary: 310 instances (buffers/inverters) removed
-*** Finish delete_buffer_trees (0:00:10.3) ***
-**INFO: Enable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 101.
-**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
-Set Default Net Delay as 0 ps.
-Set Default Net Load as 0 pF. 
-**INFO: Analyzing IO path groups for slack adjustment
-Effort level <high> specified for reg2reg_tmp.32079 path_group
-#################################################################################
-# Design Stage: PreRoute
-# Design Name: neo430_top
-# Design Mode: 90nm
-# Analysis Mode: MMMC Non-OCV 
-# Parasitics Mode: No SPEF/RCDB
-# Signoff Settings: SI Off 
-#################################################################################
-Calculate delays in Single mode...
-Total number of fetched objects 115413
-AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=1503.29 CPU=0:00:25.4 REAL=0:00:25.0)
-**INFO: Disable pre-place timing setting for timing analysis
-Set Using Default Delay Limit as 1000.
-Set Default Net Delay as 1000 ps.
-Set Default Net Load as 0.5 pF. 
-**INFO: Pre-place timing setting for timing analysis already disabled
-Deleted 0 physical inst  (cell - / prefix -).
-Did not delete 56644 physical insts as they were marked preplaced.
-*** Starting "NanoPlace(TM) placement v#1 (mem=1487.5M)" ...
-*** Build Buffered Sizing Timing Model
-(cpu=0:00:04.2 mem=1487.5M) ***
-*** Build Virtual Sizing Timing Model
-(cpu=0:00:05.0 mem=1487.5M) ***
-Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
-Scan chains were not defined.
-#std cell=169280 (56644 fixed + 112636 movable) #block=0 (0 floating + 0 preplaced)
-#ioInst=0 #net=112898 #term=405683 #term/net=3.59, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=174
-stdCell: 169280 single + 0 double + 0 multi
-Total standard cell length = 810.6683 (mm), area = 3.9561 (mm^2)
-Estimated cell power/ground rail width = 0.915 um
-Average module density = 0.905.
-Density for the design = 0.905.
-       = stdcell_area 1230131 sites (3781915 um^2) / alloc_area 1358885 sites (4177755 um^2).
-Pin Density = 0.2304.
-            = total # of pins 405683 / total area 1760724.
-=== lastAutoLevel = 10 
-Found multi-fanin net twi_sda_io
-Found multi-fanin net twi_scl_io
-Found 2 (out of 112898) multi-fanin nets.
-Clock gating cells determined by native netlist tracing.
-Iteration  1: Total net bbox = 6.972e-06 (3.41e-06 3.56e-06)
-              Est.  stn bbox = 7.439e-06 (3.78e-06 3.66e-06)
-              cpu = 0:00:00.5 real = 0:00:01.0 mem = 1673.2M
-Iteration  2: Total net bbox = 6.972e-06 (3.41e-06 3.56e-06)
-              Est.  stn bbox = 7.439e-06 (3.78e-06 3.66e-06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1674.9M
-Iteration  3: Total net bbox = 5.257e+03 (2.51e+03 2.75e+03)
-              Est.  stn bbox = 6.914e+03 (3.22e+03 3.69e+03)
-              cpu = 0:00:08.7 real = 0:00:08.0 mem = 1714.2M
-Active setup views:
-    default_emulate_view
-Iteration  4: Total net bbox = 2.021e+06 (1.29e+06 7.34e+05)
-              Est.  stn bbox = 2.990e+06 (1.91e+06 1.08e+06)
-              cpu = 0:00:56.1 real = 0:00:57.0 mem = 1714.2M
-Iteration  5: Total net bbox = 2.612e+06 (1.47e+06 1.15e+06)
-              Est.  stn bbox = 3.856e+06 (2.19e+06 1.66e+06)
-              cpu = 0:00:47.4 real = 0:00:48.0 mem = 1714.2M
-Iteration  6: Total net bbox = 4.306e+06 (2.39e+06 1.92e+06)
-              Est.  stn bbox = 5.973e+06 (3.35e+06 2.62e+06)
-              cpu = 0:01:06 real = 0:01:07 mem = 1770.0M
-
-Iteration  7: Total net bbox = 4.654e+06 (2.62e+06 2.03e+06)
-              Est.  stn bbox = 6.322e+06 (3.58e+06 2.74e+06)
-              cpu = 0:00:00.1 real = 0:00:00.0 mem = 1754.0M
-Iteration  8: Total net bbox = 4.656e+06 (2.62e+06 2.04e+06)
-              Est.  stn bbox = 6.326e+06 (3.58e+06 2.74e+06)
-              cpu = 0:01:11 real = 0:01:11 mem = 1754.0M
-Iteration  9: Total net bbox = 4.844e+06 (2.66e+06 2.18e+06)
-              Est.  stn bbox = 6.510e+06 (3.60e+06 2.91e+06)
-              cpu = 0:01:57 real = 0:01:59 mem = 1754.0M
-Iteration 10: Total net bbox = 4.909e+06 (2.69e+06 2.22e+06)
-              Est.  stn bbox = 6.579e+06 (3.64e+06 2.94e+06)
-              cpu = 0:01:07 real = 0:01:07 mem = 1754.0M
-Iteration 11: Total net bbox = 4.973e+06 (2.70e+06 2.27e+06)
-              Est.  stn bbox = 6.637e+06 (3.64e+06 2.99e+06)
-              cpu = 0:01:53 real = 0:01:54 mem = 1763.7M
-Iteration 12: Total net bbox = 5.020e+06 (2.73e+06 2.29e+06)
-              Est.  stn bbox = 6.690e+06 (3.67e+06 3.02e+06)
-              cpu = 0:01:03 real = 0:01:03 mem = 1763.7M
-Iteration 13: Total net bbox = 5.051e+06 (2.75e+06 2.30e+06)
-              Est.  stn bbox = 6.743e+06 (3.71e+06 3.04e+06)
-              cpu = 0:01:30 real = 0:01:31 mem = 1768.6M
-Iteration 14: Total net bbox = 5.051e+06 (2.75e+06 2.30e+06)
-              Est.  stn bbox = 6.743e+06 (3.71e+06 3.04e+06)
-              cpu = 0:00:00.2 real = 0:00:01.0 mem = 1768.6M
-Iteration 15: Total net bbox = 5.362e+06 (2.88e+06 2.48e+06)
-              Est.  stn bbox = 7.089e+06 (3.85e+06 3.24e+06)
-              cpu = 0:01:26 real = 0:01:26 mem = 1788.7M
-Iteration 16: Total net bbox = 5.362e+06 (2.88e+06 2.48e+06)
-              Est.  stn bbox = 7.089e+06 (3.85e+06 3.24e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1788.7M
-Iteration 17: Total net bbox = 5.362e+06 (2.88e+06 2.48e+06)
-              Est.  stn bbox = 7.089e+06 (3.85e+06 3.24e+06)
-              cpu = 0:00:00.2 real = 0:00:00.0 mem = 1788.7M
-*** cost = 5.362e+06 (2.88e+06 2.48e+06) (cpu for global=0:13:23) real=0:13:30***
-Info: 6223 clock gating cells identified, 6223 (on average) moved
-neo430_top
-neo430_top
-Core Placement runtime cpu: 0:09:37 real: 0:09:43
-*** Starting place_detail (0:16:16 mem=1600.1M) ***
-Total net bbox length = 5.362e+06 (2.877e+06 2.485e+06) (ext = 1.282e+05)
-Density distribution unevenness ratio = 3.375%
-Move report: Detail placement moves 112636 insts, mean move: 11.99 um, max move: 192.55 um
-	Max move on inst (neo430_dmem_inst/g327879): (845.67, 565.16) --> (657.09, 569.13)
-	Runtime: CPU: 0:00:21.8 REAL: 0:00:22.0 MEM: 1674.5MB
-Summary Report:
-Instances move: 112636 (out of 112636 movable)
-Instances flipped: 0
-Mean displacement: 11.99 um
-Max displacement: 192.55 um (Instance: neo430_dmem_inst/g327879) (845.667, 565.159) -> (657.09, 569.13)
-	Length: 8 sites, height: 1 rows, site name: core, cell type: AN222X1
-Total net bbox length = 5.830e+06 (3.265e+06 2.565e+06) (ext = 1.281e+05)
-Runtime: CPU: 0:00:22.0 REAL: 0:00:22.0 MEM: 1674.5MB
-*** Finished place_detail (0:16:38 mem=1674.5M) ***
-*** End of Placement (cpu=0:14:20, real=0:14:26, mem=1674.5M) ***
-default core: bins with density >  0.75 = 42.5 % ( 1000 / 2352 )
-Density distribution unevenness ratio = 3.287%
-*** Free Virtual Timing Model ...(mem=1674.5M)
-UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   final
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   global_place
-Starting congestion repair ...
-[NR-eGR] honorMsvRouteConstraint: false
-[NR-eGR] honorClockSpecNDR      : 0
-[NR-eGR] minRouteLayer          : 2
-[NR-eGR] maxRouteLayer          : 127
-[NR-eGR] numTracksPerClockWire  : 0
-[NR-eGR] Layer1 has no routable track
-[NR-eGR] Layer2 has single uniform track structure
-[NR-eGR] Layer3 has single uniform track structure
-[NR-eGR] Layer4 has single uniform track structure
-[NR-eGR] Layer5 has single uniform track structure
-[NR-eGR] Layer6 has single uniform track structure
-[NR-eGR] numRoutingBlks=0 numInstBlks=0 numPGBlocks=45885 numBumpBlks=0 numBoundaryFakeBlks=0
-[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
-[NR-eGR] Read numTotalNets=112734  numIgnoredNets=0
-[NR-eGR] There are 6224 clock nets ( 0 with NDR ).
-[NR-eGR] ============ Routing rule table ============
-[NR-eGR] Rule id 0. Nets 112734 
-[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
-[NR-eGR] Pitch:  L1=460  L2=630  L3=610  L4=630  L5=610  L6=1260
-[NR-eGR] ========================================
-[NR-eGR] 
-[NR-eGR] Layer group 1: route 112734 net(s) in layer range [2, 6]
-[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.03% H + 0.01% V. EstWL: 7.957889e+06um
-[NR-eGR] 
-[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.04% H + 0.02% V
-[NR-eGR] Overflow after earlyGlobalRoute 0.05% H + 0.03% V
-Local HotSpot Analysis: normalized max congestion hotspot area = 0.52, normalized total congestion hotspot area = 0.79 (area is in unit of 4 std-cell row bins)
-describeCongestion: hCong = 0.00 vCong = 0.00
-Skipped repairing congestion.
-[NR-eGR] Layer1(MET1)(F) length: 0.000000e+00um, number of vias: 405345
-[NR-eGR] Layer2(MET2)(V) length: 2.011073e+06um, number of vias: 581914
-[NR-eGR] Layer3(MET3)(H) length: 2.908510e+06um, number of vias: 83631
-[NR-eGR] Layer4(MET4)(V) length: 1.551670e+06um, number of vias: 32527
-[NR-eGR] Layer5(MET5)(H) length: 1.539932e+06um, number of vias: 2505
-[NR-eGR] Layer6(METTP)(V) length: 1.646244e+05um, number of vias: 0
-[NR-eGR] Total length: 8.175810e+06um, number of vias: 1105922
-End of congRepair (cpu=0:00:06.0, real=0:00:06.0)
-*** Finishing place_design default flow ***
-**ERROR: (IMPSP-9099):	Scan chains exist in this design but are not defined. Placement and timing QoR can be severely impacted in this case!
-It is highly recommend to define scan chains either through input scan def (preferred) or create_scan_chain.
-***** Total cpu  0:15:22
-***** Total real time  0:15:28
-**place_design ... cpu = 0:15:22, real = 0:15:28, mem = 1621.3M **
-Command spTest is not supported.
-
-*** Summary of all messages that are not suppressed in this session:
-Severity  ID               Count  Summary                                  
-WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
-ERROR     IMPSP-9099           2  Scan chains exist in this design but are...
-*** Message Summary: 1 warning(s), 2 error(s)
-
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:                                                                   final
-default_emulate_view
-     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
-UM:        967.05           1165                                      place_design
-[DEV]innovus 3> gui_select -point {723.166 1491.576}
-gui_select -rect {725.655 1490.746 1748.057 1011.506}
-a
-a
-ambiguous command name "a": add_area_io_fillers add_area_io_rows add_buffer_for_feedthrough add_clock_tree_exclusion_drivers add_decap_cell_candidates add_decaps add_decomp_filler add_endcaps add_fences add_filler_gaps add_fillers add_gate_array_filler add_io_buffers add_io_fillers add_io_insts add_io_row_fillers add_mask_colors add_metal_fill add_mim_cap add_notch_fill add_partition_feedthrus add_power_mesh_colors add_power_switches add_repeaters add_rings add_route_via_defs add_sdp_objs add_spare_insts add_split_power_vias add_stripes add_tap_walls add_tieoffs add_to_collection add_tracks add_tsv add_via_fill add_well_taps after align_partition_clones align_pins align_selected all_analysis_views all_clocks all_connected all_constraint_modes all_delay_corners all_fanin all_fanout all_inputs all_instances all_library_sets all_opconds all_outputs all_rc_corners all_registers all_timing_conditions analyze_paths_by_bottleneck analyze_paths_by_clock_domain analyze_paths_by_critical_false_path analyze_paths_by_default_path_group analyze_paths_by_drv analyze_paths_by_hier_port analyze_paths_by_hierarchy analyze_paths_by_view append append_to_collection apply array assemble_design assemble_proto_model assign_bumps assign_clock_tree_source_groups assign_io_pins assign_partition_pins assign_pg_bumps assign_signal_to_bump assign_tsv auto_execok auto_import auto_load auto_load_index auto_mkindex auto_mkindex_old auto_qualify auto_reset
-a
-[DEV]innovus 4> a
-ambiguous command name "a": add_area_io_fillers add_area_io_rows add_buffer_for_feedthrough add_clock_tree_exclusion_drivers add_decap_cell_candidates add_decaps add_decomp_filler add_endcaps add_fences add_filler_gaps add_fillers add_gate_array_filler add_io_buffers add_io_fillers add_io_insts add_io_row_fillers add_mask_colors add_metal_fill add_mim_cap add_notch_fill add_partition_feedthrus add_power_mesh_colors add_power_switches add_repeaters add_rings add_route_via_defs add_sdp_objs add_spare_insts add_split_power_vias add_stripes add_tap_walls add_tieoffs add_to_collection add_tracks add_tsv add_via_fill add_well_taps after align_partition_clones align_pins align_selected all_analysis_views all_clocks all_connected all_constraint_modes all_delay_corners all_fanin all_fanout all_inputs all_instances all_library_sets all_opconds all_outputs all_rc_corners all_registers all_timing_conditions analyze_paths_by_bottleneck analyze_paths_by_clock_domain analyze_paths_by_critical_false_path analyze_paths_by_default_path_group analyze_paths_by_drv analyze_paths_by_hier_port analyze_paths_by_hierarchy analyze_paths_by_view append append_to_collection apply array assemble_design assemble_proto_model assign_bumps assign_clock_tree_source_groups assign_io_pins assign_partition_pins assign_pg_bumps assign_signal_to_bump assign_tsv auto_execok auto_import auto_load auto_load_index auto_mkindex auto_mkindex_old auto_qualify auto_reset
-[DEV]innovus 5> 
-[DEV]innovus 5> a
-
-ambiguous command name "a": add_area_io_fillers add_area_io_rows add_buffer_for_feedthrough add_clock_tree_exclusion_drivers add_decap_cell_candidates add_decaps add_decomp_filler add_endcaps add_fences add_filler_gaps add_fillers add_gate_array_filler add_io_buffers add_io_fillers add_io_insts add_io_row_fillers add_mask_colors add_metal_fill add_mim_cap add_notch_fill add_partition_feedthrus add_power_mesh_colors add_power_switches add_repeaters add_rings add_route_via_defs add_sdp_objs add_spare_insts add_split_power_vias add_stripes add_tap_walls add_tieoffs add_to_collection add_tracks add_tsv add_via_fill add_well_taps after align_partition_clones align_pins align_selected all_analysis_views all_clocks all_connected all_constraint_modes all_delay_corners all_fanin all_fanout all_inputs all_instances all_library_sets all_opconds all_outputs all_rc_corners all_registers all_timing_conditions analyze_paths_by_bottleneck analyze_paths_by_clock_domain analyze_paths_by_critical_false_path analyze_paths_by_default_path_group analyze_paths_by_drv analyze_paths_by_hier_port analyze_paths_by_hierarchy analyze_paths_by_view append append_to_collection apply array assemble_design assemble_proto_model assign_bumps assign_clock_tree_source_groups assign_io_pins assign_partition_pins assign_pg_bumps assign_signal_to_bump assign_tsv auto_execok auto_import auto_load auto_load_index auto_mkindex auto_mkindex_old auto_qualify auto_reset
-[DEV]innovus 6> edit_pin -side Top -layer 4 -spread_type center -spacing 3 -pin {clk_i {gpio_o[0]} {gpio_o[1]} {gpio_o[2]} {gpio_o[3]} {gpio_o[4]} {gpio_o[5]} {gpio_o[6]} {gpio_o[7]} {gpio_o[8]} {gpio_o[9]} {gpio_o[10]} {gpio_o[11]} {gpio_o[12]} {gpio_o[13]} {gpio_o[14] {gpio_o[15]} wb_we_o {wb_sel_o[0]} {wb_sel_o[1]} {wb_sel_o[2]} {wb_sel_o[3]} wb_stb_o wb_cyc_o wb_ack_i {ext_irq_i[0]} {ext_irq_i[1]} {ext_irq_i[2]} {ext_irq_i[3]} {ext_irq_i[4]} {ext_irq_i[5]} {ext_irq_i[6]} {ext_irq_i[7]} {ext_ack_o[0]} {ext_ack_o[1]} {ext_ack_o[2]} {ext_ack_o[3]} {ext_ack_o[4]} {ext_ack_o[5]} {ext_ack_o[6]} {ext_ack_o[7]}}
-
-edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{gpio_i[0]} {gpio_i[1]} {gpio_i[2]} {gpio_i[3]} {gpio_i[4]} {gpio_i[5]} {gpio_i[6]} {gpio_i[7]} {gpio_i[8]} {gpio_i[9]} {gpio_i[10]} {gpio_i[11]} {gpio_i[12]} {gpio_i[13]} {gpio_i[14]} {gpio_i[15]} rst_i {wb_dat_o[0]}{wb_dat_o[1]}{wb_dat_o[2]}{wb_dat_o[3]}{wb_dat_o[4]}{wb_dat_o[5]}{wb_dat_o[6]}{wb_dat_o[7]}{wb_dat_o[8]}{wb_dat_o[9]}{wb_dat_o[10]}{wb_dat_o[11]}{wb_dat_o[11]}{wb_dat_o[12]}{wb_dat_o[13]}{wb_dat_o[14]}{wb_dat_o[15]}{wb_dat_o[16]}{wb_dat_o[17]}{wb_dat_o[18]}{wb_dat_o[19]}{wb_dat_o[20]}{wb_dat_o[21]}{wb_dat_o[22]}{wb_dat_o[23]}{wb_dat_o[24]}{wb_dat_o[25]}{wb_dat_o[26]}{wb_dat_o[27]}{wb_dat_o[28]}{wb_dat_o[29]}{wb_dat_o[30]} {wb_dat_o[31]}}
-edit_pin -side Bottom -layer 4 -spread_type center -spacing 3 -pin {uart_rxd_i spi_sclk_o spi_mosi_o spi_miso_i {spi_cs_o[0]} {spi_cs_o[1]} {spi_cs_o[2]} {spi_cs_o[3]} {spi_cs_o[4]} {spi_cs_o[5]} twi_sda_io twi_scl_io {wb_dat_i[0]}{wb_dat_i[1]}{wb_dat_i[2]}{wb_dat_i[3]}{wb_dat_i[4]}{wb_dat_i[5]}{wb_dat_i[6]}{wb_dat_i[7]}{wb_dat_i[8]}{wb_dat_i[9]}{wb_dat_i[10]}{wb_dat_i[11]}{wb_dat_i[11]}{wb_dat_i[12]}{wb_dat_i[13]}{wb_dat_i[14]}{wb_dat_i[15]}{wb_dat_i[16]}{wb_dat_i[17]}{wb_dat_i[18]}{wb_dat_i[19]}{wb_dat_i[20]}{wb_dat_i[21]}{wb_dat_i[22]}{wb_dat_i[23]}{wb_dat_i[24]}{wb_dat_i[25]}{wb_dat_i[26]}{wb_dat_i[27]}{wb_dat_i[28]}{wb_dat_i[29]}{wb_dat_i[30]} {wb_dat_i[31]}}
-edit_pin -side Bottom -layer 4 -spread_type center -spacing 3 -pin {uart_rxd_i spi_sclk_o spi_mosi_o spi_miso_i {spi_cs_o[0]} {spi_cs_o[1]} {spi_cs_o[2]} {spi_cs_o[3]} {spi_cs_o[4]} {spi_cs_o[5]} twi_sda_io twi_scl_io {wb_dat_i[0]}{wb_dat_i[1]}{wb_dat_i[2]}{wb_dat_i[3]}{wb_dat_i[4]}{wb_dat_i[5]}{wb_dat_i[6]}{wb_dat_i[7]}{wb_dat_i[8]}{wb_dat_i[9]}{wb_dat_i[10]}{wb_dat_i[11]}{wb_dat_i[11]}{wb_dat_i[12]}{wb_dat_i[13]}{wb_dat_i[14]}{wb_dat_i[15]}{wb_dat_i[16]}{wb_dat_i[17]}{wb_dat_i[18]}{wb_dat_i[19]}{wb_dat_i[20]}{wb_dat_i[21]}{wb_dat_i[22]}{wb_dat_i[23]}{wb_dat_i[24]}{wb_dat_i[25]}{wb_dat_i[26]}{wb_dat_i[27]}{wb_dat_i[28]}{wb_dat_i[29]}{wb_dat_i[30]} {wb_dat_i[31]}}
-c
-casdashd~
-;
-asdasd
-eval_legacy {saveDesign placement_1.inn}
-}
-**WARN: (IMPPTN-1235):	Cannot find pin gpio_o[14] {gpio_o[15]} wb_we_o {wb_sel_o[0]} {wb_sel_o[1]} {wb_sel_o[2]} {wb_sel_o[3]} wb_stb_o wb_cyc_o wb_ack_i {ext_irq_i[0]} {ext_irq_i[1]} {ext_irq_i[2]} {ext_irq_i[3]} {ext_irq_i[4]} {ext_irq_i[5]} {ext_irq_i[6]} {ext_irq_i[7]} {ext_ack_o[0]} {ext_ack_o[1]} {ext_ack_o[2]} {ext_ack_o[3]} {ext_ack_o[4]} {ext_ack_o[5]} {ext_ack_o[6]} {ext_ack_o[7]} on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin edit_pin on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -side on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin Left on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -layer on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -spread_type on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin center on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -spacing on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -pin on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin {gpio_i[0]} {gpio_i[1]} {gpio_i[2]} {gpio_i[3]} {gpio_i[4]} {gpio_i[5]} {gpio_i[6]} {gpio_i[7]} {gpio_i[8]} {gpio_i[9]} {gpio_i[10]} {gpio_i[11]} {gpio_i[12]} {gpio_i[13]} {gpio_i[14]} {gpio_i[15]} rst_i {wb_dat_o[0]}{wb_dat_o[1]}{wb_dat_o[2]}{wb_dat_o[3]}{wb_dat_o[4]}{wb_dat_o[5]}{wb_dat_o[6]}{wb_dat_o[7]}{wb_dat_o[8]}{wb_dat_o[9]}{wb_dat_o[10]}{wb_dat_o[11]}{wb_dat_o[11]}{wb_dat_o[12]}{wb_dat_o[13]}{wb_dat_o[14]}{wb_dat_o[15]}{wb_dat_o[16]}{wb_dat_o[17]}{wb_dat_o[18]}{wb_dat_o[19]}{wb_dat_o[20]}{wb_dat_o[21]}{wb_dat_o[22]}{wb_dat_o[23]}{wb_dat_o[24]}{wb_dat_o[25]}{wb_dat_o[26]}{wb_dat_o[27]}{wb_dat_o[28]}{wb_dat_o[29]}{wb_dat_o[30]} {wb_dat_o[31]} on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin edit_pin on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -side on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin Bottom on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -layer on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin 4 on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -spread_type on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin center on partition neo430_top
-**WARN: (IMPPTN-1235):	Cannot find pin -spacing on partition neo430_top
-**WARN: (EMS-27):	Message (IMPPTN-1235) has exceeded the current message display limit of 20.
-To increase the message display limit, refer to the product command reference manual.
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [15] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:00.0, mem = 1636.1M).
-[DEV]innovus 7> edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{gpio_i[0]} {gpio_i[1]} {gpio_i[2]} {gpio_i[3]} {gpio_i[4]} {gpio_i[5]} {gpio_i[6]} {gpio_i[7]} {gpio_i[8]} {gpio_i[9]} {gpio_i[10]} {gpio_i[11]} {gpio_i[12]} {gpio_i[13]} {gpio_i[14]} {gpio_i[15]} rst_i {wb_dat_o[0]}{wb_dat_o[1]}{wb_dat_o[2]}{wb_dat_o[3]}{wb_dat_o[4]}{wb_dat_o[5]}{wb_dat_o[6]}{wb_dat_o[7]}{wb_dat_o[8]}{wb_dat_o[9]}{wb_dat_o[10]}{wb_dat_o[11]}{wb_dat_o[11]}{wb_dat_o[12]}{wb_dat_o[13]}{wb_dat_o[14]}{wb_dat_o[15]}{wb_dat_o[16]}{wb_dat_o[17]}{wb_dat_o[18]}{wb_dat_o[19]}{wb_dat_o[20]}{wb_dat_o[21]}{wb_dat_o[22]}{wb_dat_o[23]}{wb_dat_o[24]}{wb_dat_o[25]}{wb_dat_o[26]}{wb_dat_o[27]}{wb_dat_o[28]}{wb_dat_o[29]}{wb_dat_o[30]} {wb_dat_o[31]}}}
-
-extra characters after close-brace
-[DEV]innovus 8> edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{gpio_i[0]} {gpio_i[1]} {gpio_i[2]} {gpio_i[3]} {gpio_i[4]} {gpio_i[5]} {gpio_i[6]} {gpio_i[7]} {gpio_i[8]} {gpio_i[9]} {gpio_i[10]} {gpio_i[11]} {gpio_i[12]} {gpio_i[13]} {gpio_i[14]} {gpio_i[15]} rst_i {wb_dat_o[0]}{wb_dat_o[1]}{wb_dat_o[2]}{wb_dat_o[3]}{wb_dat_o[4]}{wb_dat_o[5]}{wb_dat_o[6]}{wb_dat_o[7]}{wb_dat_o[8]}{wb_dat_o[9]}{wb_dat_o[10]}{wb_dat_o[11]}{wb_dat_o[11]}{wb_dat_o[12]}{wb_dat_o[13]}{wb_dat_o[14]}{wb_dat_o[15]}{wb_dat_o[16]}{wb_dat_o[17]}{wb_dat_o[18]}{wb_dat_o[19]}{wb_dat_o[20]}{wb_dat_o[21]}{wb_dat_o[22]}{wb_dat_o[23]}{wb_dat_o[24]}{wb_dat_o[25]}{wb_dat_o[26]}{wb_dat_o[27]}{wb_dat_o[28]}{wb_dat_o[29]}{wb_dat_o[30]} {wb_dat_o[31]}
-}
-
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_o[1]}{wb_dat" instead of space
-[DEV]innovus 9> eval_legacy {saveDesign placement_1.inn}
-#- Begin Save netlist data ... (date=02/23 05:29:55, mem=1636.1M)
-Writing Binary DB to placement_1.inn.dat/neo430_top.v.bin ...
-#- End Save netlist data ... (date=02/23 05:29:55, total cpu=0:00:00.4, real=0:00:00.0, peak res=2158.1M, current mem=2158.1M)
-#- Begin Save AAE data ... (date=02/23 05:29:55, mem=2158.1M)
-Saving AAE Data ...
-#- End Save AAE data ... (date=02/23 05:29:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=2158.1M, current mem=2158.1M)
-#- Begin Save clock tree data ... (date=02/23 05:29:55, mem=2158.1M)
-#- End Save clock tree data ... (date=02/23 05:29:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=2158.1M, current mem=2158.1M)
-Saving preference file placement_1.inn.dat/gui.pref.tcl ...
-Saving mode setting ...
-Saving root attributes to be loaded post write_db ...
-Saving global file ...
-Saving root attributes to be loaded previous write_db ...
-#- Begin Save floorplan data ... (date=02/23 05:29:56, mem=2158.1M)
-Saving floorplan file ...
-#- End Save floorplan data ... (date=02/23 05:29:57, total cpu=0:00:00.9, real=0:00:01.0, peak res=2158.1M, current mem=2158.1M)
-Saving Drc markers ...
-... No Drc file written since there is no markers found.
-#- Begin Save placement data ... (date=02/23 05:29:57, mem=2158.1M)
-Saving placement file ...
-#- End Save placement data ... (date=02/23 05:29:57, total cpu=0:00:00.3, real=0:00:00.0, peak res=2158.1M, current mem=2158.1M)
-#- Begin Save routing data ... (date=02/23 05:29:57, mem=2158.1M)
-Saving route file ...
-*** Completed saveRoute (cpu=0:00:02.2 real=0:00:06.0 mem=2158.1M) ***
-#- End Save routing data ... (date=02/23 05:30:03, total cpu=0:00:02.3, real=0:00:06.0, peak res=2158.1M, current mem=2158.1M)
-Saving property file placement_1.inn.dat/neo430_top.prop
-*** Completed saveProperty (cpu=0:00:00.2 real=0:00:00.0 mem=2158.1M) ***
-#- Begin Save power constraints data ... (date=02/23 05:30:03, mem=2158.1M)
-#- End Save power constraints data ... (date=02/23 05:30:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=2158.1M, current mem=2158.1M)
-No integration constraint in the design.
-
-
-default_emulate_rc_corner
-
-
-Generated self-contained design placement_1.inn.dat
-*** Message Summary: 0 warning(s), 0 error(s)
-
-0
-[DEV]innovus 10> edit_pin -side Left -layer 3 -spread_type center -spacing 3 -pin {{gpio_i[0]} {gpio_i[1]} {gpio_i[2]} {gpio_i[3]} {gpio_i[4]} {gpio_i[5]} {gpio_i[6]} {gpio_i[7]} {gpio_i[8]} {gpio_i[9]} {gpio_i[10]} {gpio_i[11]} {gpio_i[12]} {gpio_i[13]} {gpio_i[14]} {gpio_i[15]} rst_i {wb_dat_o[0]}{wb_dat_o[1]}{wb_dat_o[2]}{wb_dat_o[3]}{wb_dat_o[4]}{wb_dat_o[5]}{wb_dat_o[6]}{wb_dat_o[7]}{wb_dat_o[8]}{wb_dat_o[9]}{wb_dat_o[10]}{wb_dat_o[11]}{wb_dat_o[11]}{wb_dat_o[12]}{wb_dat_o[13]}{wb_dat_o[14]}{wb_dat_o[15]}{wb_dat_o[16]}{wb_dat_o[17]}{wb_dat_o[18]}{wb_dat_o[19]}{wb_dat_o[20]}{wb_dat_o[21]}{wb_dat_o[22]}{wb_dat_o[23]}{wb_dat_o[24]}{wb_dat_o[25]}{wb_dat_o[26]}{wb_dat_o[27]}{wb_dat_o[28]}{wb_dat_o[29]}{wb_dat_o[30]} {wb_dat_o[31]}}
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_o[1]}{wb_dat" instead of space
-[DEV]innovus 11> eval_legacy {source physical/3_pin_clock.tcl }
-missing close-brace
-[DEV]innovus 12> eval_legacy {source physical/3_pin_clock.tcl}
-missing close-brace
-[DEV]innovus 13> source physical/3_pin_clock.tcl 
-missing close-brace
-[DEV]innovus 14> edit_pin -side Top -layer 4 -spread_type center -spacing 3 -pin {clk_i {gpio_o[0]} {gpio_o[1]} {gpio_o[2]} {gpio_o[3]} {gpio_o[4]} {gpio_o[5]} {gpio_o[6]} {gpio_o[7]} {gpio_o[8]} {gpio_o[9]} {gpio_o[10]} {gpio_o[11]} {gpio_o[12]} {gpio_o[13]} {gpio_o[14] {gpio_o[15]} wb_we_o {wb_sel_o[0]} {wb_sel_o[1]} {wb_sel_o[2]} {wb_sel_o[3]} wb_stb_o wb_cyc_o wb_ack_i {ext_irq_i[0]} {ext_irq_i[1]} {ext_irq_i[2]} {ext_irq_i[3]} {ext_irq_i[4]} {ext_irq_i[5]} {ext_irq_i[6]} {ext_irq_i[7]} {ext_ack_o[0]} {ext_ack_o[1]} {ext_ack_o[2]} {ext_ack_o[3]} {ext_ack_o[4]} {ext_ack_o[5]} {ext_ack_o[6]} {ext_ack_o[7]}}
-}
-**WARN: (IMPPTN-1235):	Cannot find pin gpio_o[14] {gpio_o[15]} wb_we_o {wb_sel_o[0]} {wb_sel_o[1]} {wb_sel_o[2]} {wb_sel_o[3]} wb_stb_o wb_cyc_o wb_ack_i {ext_irq_i[0]} {ext_irq_i[1]} {ext_irq_i[2]} {ext_irq_i[3]} {ext_irq_i[4]} {ext_irq_i[5]} {ext_irq_i[6]} {ext_irq_i[7]} {ext_ack_o[0]} {ext_ack_o[1]} {ext_ack_o[2]} {ext_ack_o[3]} {ext_ack_o[4]} {ext_ack_o[5]} {ext_ack_o[6]} {ext_ack_o[7]} on partition neo430_top
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [15] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:00.0, mem = 1658.5M).
-[DEV]innovus 15> source physical/3_pin_clock.tcl 
-**WARN: (IMPPTN-1235):	Cannot find pin gpio_o[14] {gpio_o[15]} wb_we_o {wb_sel_o[0]} {wb_sel_o[1]} {wb_sel_o[2]} {wb_sel_o[3]} wb_stb_o wb_cyc_o wb_ack_i {ext_irq_i[0]} {ext_irq_i[1]} {ext_irq_i[2]} {ext_irq_i[3]} {ext_irq_i[4]} {ext_irq_i[5]} {ext_irq_i[6]} {ext_irq_i[7]} {ext_ack_o[0]} {ext_ack_o[1]} {ext_ack_o[2]} {ext_ack_o[3]} {ext_ack_o[4]} {ext_ack_o[5]} {ext_ack_o[6]} {ext_ack_o[7]} on partition neo430_top
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [15] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:00.0, mem = 1658.5M).
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_o[1]}{wb_dat" instead of space
-[DEV]innovus 16>  source physical/3_pin_clock.tcl
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [41] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:01.0, mem = 1658.5M).
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_o[1]}{wb_dat" instead of space
-[DEV]innovus 17>  source physical/3_pin_clock.tcl
-
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [41] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:00.0, mem = 1658.5M).
-**WARN: (IMPPTN-1235):	Cannot find pin 3 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_o[1]}{wb_dat" instead of space
-[DEV]innovus 18>  source physical/3_pin_clock.tcl
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [41] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:01.0, mem = 1658.5M).
-**WARN: (IMPPTN-3040):	Duplicate pin wb_dat_o[11] found in pin list. Ignoring the pin.
-To speed up, if you have to run multiple edit_pin commands then wrap all edit_pin commands within  'setPinAssignMode -pinEditInBatch true' (then edit_pin commands) and 'setPinAssignMode -pinEditInBatch false'
-Successfully spread [49] pins.
-editPin : finished (cpu = 0:00:00.1 real = 0:00:00.0, mem = 1658.5M).
-**WARN: (IMPPTN-1235):	Cannot find pin 4 on partition neo430_top
-**ERROR: (IMPPTN-963):	Either specified pin name for the selected partition does not exist or has status 'cover'. Specify the pin or the list of pins correctly and run the command again.
-list element in braces followed by "{wb_dat_i[1]}{wb_dat" instead of space
-[DEV]innovus 19> 
+[DEV]innovus 2> 

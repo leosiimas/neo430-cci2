@@ -8,8 +8,8 @@
 ##  -Annotate the delay of the final design                 ##
 ##############################################################
 ##Export design netlist
-write_netlist busca_padrao.v
+write_netlist neo430.v
 ##Annotate design delay
 extract_rc
-write_parasitics -set_load_file busca_padrao.cap
-write_sdf busca_padrao.sdf
+write_parasitics -set_load_file neo430.cap
+write_sdf neo430.sdf

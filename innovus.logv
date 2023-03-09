@@ -1,0 +1,13 @@
+[03/07 10:16:45      0s] 
+[03/07 10:16:45      0s] Cadence Innovus(TM) Implementation System.
+[03/07 10:16:45      0s] Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+[03/07 10:16:45      0s] 
+[03/07 10:16:45      0s] Version:	v16.17-s018_1, built Thu Aug 31 09:57:10 PDT 2017
+[03/07 10:16:45      0s] Options:	common_ui 
+[03/07 10:16:45      0s] Date:		Tue Mar  7 10:16:45 2023
+[03/07 10:16:45      0s] Host:		pgmicro02 (x86_64 w/Linux 3.10.0-1160.80.1.el7.x86_64) (10cores*40cpus*Intel(R) Xeon(R) CPU E5-2650L v2 @ 1.70GHz 25600KB)
+[03/07 10:16:45      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[03/07 10:16:45      0s] 
+[03/07 10:16:45      0s] License:
+[03/07 10:16:45      0s] **ERROR: (IMPLIC-68):	Unknown argument: common_ui.
+[03/07 10:16:45      0s] 	Run "innovus -help" for valid option/argument.
